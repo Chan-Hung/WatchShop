@@ -237,12 +237,13 @@
                       </ul>
                     </div>
                   </div>
-                  <h6> <a class="reset-anchor" href="detail.html">${o.title}</a></h6>
+                  <h6> <a class="reset-anchor" href="detail.html">${o.name}</a></h6>
                   <p class="small text-muted">${o.price}</p>
                 </div>
               </div>
+              </c:forEach>
             </div>
-            </c:forEach>
+
             <!-- PAGINATION-->
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center justify-content-lg-end">

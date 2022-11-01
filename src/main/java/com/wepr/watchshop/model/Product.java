@@ -1,92 +1,52 @@
 package com.wepr.watchshop.model;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "product")
+@Table(name = "products")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title;
+    @Column(name = "name", nullable = false, length = 255)
+    private String name;
 
+    @Column(name= "brand", nullable = false)
+    private String brand;
+
+    @Column(name = "origin", nullable = false)
+    private String origin;
+
+    @Column(name = "machine", nullable = false)
+    private String machine;
+
+    @Column(name = "glass", nullable = false)
+    private String glass;
+
+    @Column(name = "water_resistant", nullable = false)
+    private String waterResistant;
+
+    @Column(name = "diameter", nullable = false)
+    private String diameter;
+
+    @Column(name = "price", nullable = false)
     private Long price;
 
-    private String size;
-
-    private String color;
-
-    private String description;
-
+    @Column(name = "image", nullable = false)
     private String image;
 
-    public Product() {
-    }
-
-    public Product(Long id, String title, Long price, String size, String color, String description, String image) {
-        this.id = id;
-        this.title = title;
-        this.price = price;
-        this.size = size;
-        this.color = color;
-        this.description = description;
-        this.image = image;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Long getPrice() {
-        return price;
-    }
-
-    public void setPrice(Long price) {
-        this.price = price;
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
+    @ManyToOne
+    @JoinColumn(name="category_id", referencedColumnName = "id")
+    private Category category;
 }
