@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boutique | Ecommerce bootstrap template</title>
+    <title>WatchShop | Ecommerce shop from Group15</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -32,12 +32,12 @@
     <!-- navbar-->
     <header class="header bg-white">
         <div class="container px-lg-3">
-            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"><span class="fw-bold text-uppercase text-dark">Boutique</span></a>
+            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"><span class="fw-bold text-uppercase text-dark">WatchShop</span></a>
                 <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <!-- Link--><a class="nav-link active" href="index.html">Trang Chủ</a>
+                            <!-- Link--><a class="nav-link active" href="">Trang Chủ</a>
                         </li>
                         <li class="nav-item">
                             <!-- Link--><a class="nav-link" href="shop">Cửa Hàng</a>
@@ -47,7 +47,7 @@
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trang</a>
                             <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item border-0 transition-link" href="index.html">Trang Chủ</a>
+                                <a class="dropdown-item border-0 transition-link" href="">Trang Chủ</a>
                                 <a class="dropdown-item border-0 transition-link" href="shop.html">Cửa Hàng</a>
                                 <a class="dropdown-item border-0 transition-link" href="detail.html">Chi Tiết Sản Phẩm</a>
                                 <a class="dropdown-item border-0 transition-link" href="cart.html">Giỏ Hàng</a>
@@ -108,13 +108,13 @@
     </div>
     <!-- HERO SECTION-->
     <div class="container">
-        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(img/hero-banner-alt.jpg)">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(img/Banner.jpg)">
             <div class="container py-5">
                 <div class="row px-4 px-lg-5">
-                    <div class="col-lg-6">
-                        <p class="text-muted small text-uppercase mb-2">Sản Phẩm Mới</p>
-                        <h1 class="h2 text-uppercase mb-3">Giảm 20%</h1><a class="btn btn-dark" href="shop.html">Bộ Sưu Tập</a>
-                    </div>
+<%--                    <div class="col-lg-6">--%>
+<%--                        <p class="text-muted small text-uppercase mb-2">Sản Phẩm Mới</p>--%>
+<%--                        <h1 class="h2 text-uppercase mb-3">Giảm 20%</h1><a class="btn btn-dark" href="shop.html">Bộ Sưu Tập</a>--%>
+<%--                    </div>--%>
                 </div>
             </div>
         </section>

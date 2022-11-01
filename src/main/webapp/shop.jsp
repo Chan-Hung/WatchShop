@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Boutique | Ecommerce bootstrap template</title>
+  <title>WatchShop | Ecommerce shop from Group15</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <!-- Link--><a class="nav-link" href="index.html">Home</a>
+              <!-- Link--><a class="nav-link" href="">Home</a>
             </li>
             <li class="nav-item">
               <!-- Link--><a class="nav-link active" href="shop.html">Shop</a>
@@ -108,7 +108,7 @@
           <div class="col-lg-6 text-lg-end">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">
-                <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-dark" href="">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Shop</li>
               </ol>
             </nav>
