@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +18,10 @@
     <!-- Swiper slider-->
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
     <!-- Google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
@@ -29,67 +31,49 @@
 </head>
 <body>
 <div class="page-holder">
-    <!-- navbar-->
-    <header class="header bg-white">
-        <div class="container px-lg-3">
-            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"><span class="fw-bold text-uppercase text-dark">WatchShop</span></a>
-                <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <!-- Link--><a class="nav-link active" href="">Trang Chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link--><a class="nav-link" href="shop">Cửa Hàng</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link--><a class="nav-link" href="detail.html">Chi Tiết Sản Phẩm</a>
-                        </li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trang</a>
-                            <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">
-                                <a class="dropdown-item border-0 transition-link" href="">Trang Chủ</a>
-                                <a class="dropdown-item border-0 transition-link" href="shop.html">Cửa Hàng</a>
-                                <a class="dropdown-item border-0 transition-link" href="detail.html">Chi Tiết Sản Phẩm</a>
-                                <a class="dropdown-item border-0 transition-link" href="cart.html">Giỏ Hàng</a>
-                                <a class="dropdown-item border-0 transition-link" href="checkout.html">Thanh Toán</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="cart.html"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ Hàng<small class="text-gray fw-normal">(2)</small></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="far fa-heart me-1 text-gray fw-normal"></i>Yêu Thích</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng Nhập</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <%--    Header--%>
+    <%@ include file="common/headerPublic.jsp" %>
     <!--  Modal -->
     <div class="modal fade" id="productView" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content overflow-hidden border-0">
-                <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body p-0">
                     <div class="row align-items-stretch">
                         <div class="col-lg-6 p-lg-0">
-                            <a class="glightbox product-view d-block h-100 bg-cover bg-center" style="background: url(img/product-5.jpg)" href="img/product-5.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a>
-                            <a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a>
+                            <a class="glightbox product-view d-block h-100 bg-cover bg-center"
+                               style="background: url(img/product-5.jpg)" href="img/product-5.jpg"
+                               data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a>
+                            <a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1"
+                               data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none"
+                                                                              href="img/product-5-alt-2.jpg"
+                                                                              data-gallery="gallery1"
+                                                                              data-glightbox="Red digital smartwatch"></a>
                         </div>
                         <div class="col-lg-6">
                             <div class="p-4 my-md-4">
                                 <ul class="list-inline mb-2">
                                     <li class="list-inline-item m-0"><i class="fas fa-star small text-warning"></i></li>
-                                    <li class="list-inline-item m-0 1"><i class="fas fa-star small text-warning"></i></li>
-                                    <li class="list-inline-item m-0 2"><i class="fas fa-star small text-warning"></i></li>
-                                    <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
-                                    <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
+                                    <li class="list-inline-item m-0 1"><i class="fas fa-star small text-warning"></i>
+                                    </li>
+                                    <li class="list-inline-item m-0 2"><i class="fas fa-star small text-warning"></i>
+                                    </li>
+                                    <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i>
+                                    </li>
+                                    <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i>
+                                    </li>
                                 </ul>
                                 <h2 class="h4">Red digital smartwatch</h2>
                                 <p class="text-muted">$250</p>
-                                <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.</p>
+                                <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
+                                    ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis
+                                    parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam
+                                    convallis.</p>
                                 <div class="row align-items-stretch mb-4 gx-0">
                                     <div class="col-sm-7">
-                                        <div class="border d-flex align-items-center justify-content-between py-1 px-3"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
+                                        <div class="border d-flex align-items-center justify-content-between py-1 px-3">
+                                            <span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
                                             <div class="quantity">
                                                 <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
                                                 <input class="form-control border-0 shadow-0 p-0" type="text" value="1">
@@ -97,8 +81,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
-                                </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
+                                    <div class="col-sm-5"><a
+                                            class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
+                                            href="cart.html">Add to cart</a></div>
+                                </div>
+                                <a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i
+                                        class="far fa-heart me-2"></i>Add to wish list</a>
                             </div>
                         </div>
                     </div>
@@ -108,13 +96,11 @@
     </div>
     <!-- HERO SECTION-->
     <div class="container">
-        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url(img/Banner.jpg)">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center"
+                 style="background: url('https://www.goldsmiths.co.uk/medias/watches-hero-desktop-luxury-iwc-aug22.jpg?context=bWFzdGVyfHJvb3R8MzM5MzIzfGltYWdlL2pwZWd8aDkzL2hkOC85MTgxOTcwNjI4NjM4LmpwZ3wxZWQ5MDUzNjc5ZjQ3NjM5OTU0MWEzN2JjZjQyMDNhNjNhZTRjNjhiNWU1Y2IxNjI1NThiODc4NTliMGQ3ZjU3&imwidth=1920')">
             <div class="container py-5">
                 <div class="row px-4 px-lg-5">
-<%--                    <div class="col-lg-6">--%>
-<%--                        <p class="text-muted small text-uppercase mb-2">Sản Phẩm Mới</p>--%>
-<%--                        <h1 class="h2 text-uppercase mb-3">Giảm 20%</h1><a class="btn btn-dark" href="shop.html">Bộ Sưu Tập</a>--%>
-<%--                    </div>--%>
+
                 </div>
             </div>
         </section>
@@ -140,24 +126,31 @@
                 <h2 class="h5 text-uppercase mb-4">Đồng Hồ Citizen</h2>
             </header>
             <div class="row">
-                <c:forEach items="${productsList}" var="o">
-                <!-- PRODUCT-->
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product text-center">
-                        <div class="position-relative mb-3">
-                            <div class="badge text-white bg-"></div><a class="d-block" href="detail.html"><img class="img-fluid w-100" src="${o.image}" alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
-                                    <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark" href="#productView" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
-                                </ul>
+                <c:forEach items="${productsList}" var="o" begin="1" end="8">
+                    <!-- PRODUCT-->
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="product text-center">
+                            <div class="position-relative mb-3">
+                                <div class="badge text-white bg-"></div>
+                                <a class="d-block" href="detail.html"><img class="img-fluid w-100" src="${o.image}"
+                                                                           alt="..."></a>
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
+                                                                                href="#!"><i
+                                                class="far fa-heart"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
+                                                                                href="cart.html">Add to cart</a></li>
+                                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark"
+                                                                             href="#productView" data-bs-toggle="modal"><i
+                                                class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
+                            <h6><a class="reset-anchor" href="detail.html">${o.name}</a></h6>
+                            <p class="small text-muted">${o.price}</p>
                         </div>
-                        <h6> <a class="reset-anchor" href="detail.html">${o.name}</a></h6>
-                        <p class="small text-muted">${o.price}</p>
                     </div>
-                </div>
                 </c:forEach>
             </div>
         </section>
@@ -169,7 +162,7 @@
                         <div class="d-inline-block">
                             <div class="d-flex align-items-end">
                                 <svg class="svg-icon svg-icon-big svg-icon-light">
-                                    <use xlink:href="#delivery-time-1"> </use>
+                                    <use xlink:href="#delivery-time-1"></use>
                                 </svg>
                                 <div class="text-start ms-3">
                                     <h6 class="text-uppercase mb-1">Miễn Phí Vận Chuyển</h6>
@@ -182,7 +175,7 @@
                         <div class="d-inline-block">
                             <div class="d-flex align-items-end">
                                 <svg class="svg-icon svg-icon-big svg-icon-light">
-                                    <use xlink:href="#helpline-24h-1"> </use>
+                                    <use xlink:href="#helpline-24h-1"></use>
                                 </svg>
                                 <div class="text-start ms-3">
                                     <h6 class="text-uppercase mb-1">Phục Vụ 24/7</h6>
@@ -195,7 +188,7 @@
                         <div class="d-inline-block">
                             <div class="d-flex align-items-end">
                                 <svg class="svg-icon svg-icon-big svg-icon-light">
-                                    <use xlink:href="#label-tag-1"> </use>
+                                    <use xlink:href="#label-tag-1"></use>
                                 </svg>
                                 <div class="text-start ms-3">
                                     <h6 class="text-uppercase mb-1">Sale</h6>
@@ -213,12 +206,14 @@
                 <div class="row gy-3">
                     <div class="col-lg-6">
                         <h5 class="text-uppercase">Trở Thành Khách Hàng Thân Thiết</h5>
-                        <p class="text-sm text-muted mb-0">Cập Nhật những chương trình sản phẩm mới và giảm giá về Email của bạn</p>
+                        <p class="text-sm text-muted mb-0">Cập Nhật những chương trình sản phẩm mới và giảm giá về Email
+                            của bạn</p>
                     </div>
                     <div class="col-lg-6">
                         <form action="#">
                             <div class="input-group">
-                                <input class="form-control form-control-lg" type="email" placeholder="Enter your email address" aria-describedby="button-addon2">
+                                <input class="form-control form-control-lg" type="email"
+                                       placeholder="Enter your email address" aria-describedby="button-addon2">
                                 <button class="btn btn-dark" id="button-addon2" type="submit">Xác Nhận</button>
                             </div>
                         </form>
@@ -227,50 +222,10 @@
             </div>
         </section>
     </div>
-    <footer class="bg-dark text-white">
-        <div class="container py-4">
-            <div class="row py-5">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h6 class="text-uppercase mb-3">Dịch Vụ</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="footer-link" href="#!">Trợ Giúp &amp; Liên Hệ</a></li>
-                        <li><a class="footer-link" href="#!">Trở Về Trang Chủ</a></li>
-                        <li><a class="footer-link" href="#!">Cửa Hàng Trực Tuyến</a></li>
-                        <li><a class="footer-link" href="#!">Điều Khoản &amp; Điều Kiện </a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h6 class="text-uppercase mb-3">Công Ty</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="footer-link" href="#!">Về Công Ty</a></li>
-                        <li><a class="footer-link" href="#!">Dịch Vụ</a></li>
-                        <li><a class="footer-link" href="#!">Bài đăng gần nhất</a></li>
-                        <li><a class="footer-link" href="#!">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="text-uppercase mb-3">Truyền Thông</h6>
-                    <ul class="list-unstyled mb-0">
-                        <!-- <li><a class="footer-link" href="#!"></a></li> -->
-                        <li><a class="footer-link" href="#!">Twitter</a></li>
-                        <li><a class="footer-link" href="#!">Instagram</a></li>
-                        <li><a class="footer-link" href="#!">Facebook</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-top pt-4" style="border-color: #1d1d1d !important">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="small text-muted mb-0">&copy; 2022 All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!-- <p class="small text-muted mb-0">Template designed by <a class="text-white reset-anchor" href="https://bootstrapious.com/p/boutique-bootstrap-e-commerce-template">Bootstrapious</a></p> -->
-                        <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+<%--        Footer--%>
+        <%@ include file="/common/footerPublic.jsp"%>
+
     <!-- JavaScript files-->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/glightbox/js/glightbox.min.js"></script>
@@ -289,13 +244,14 @@
             var ajax = new XMLHttpRequest();
             ajax.open("GET", path, true);
             ajax.send();
-            ajax.onload = function(e) {
+            ajax.onload = function (e) {
                 var div = document.createElement("div");
                 div.className = 'd-none';
                 div.innerHTML = ajax.responseText;
                 document.body.insertBefore(div, document.body.childNodes[0]);
             }
         }
+
         // this is set to BootstrapTemple website as you cannot
         // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
         // while using file:// protocol
@@ -304,7 +260,8 @@
 
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </div>
 </body>
 </html>

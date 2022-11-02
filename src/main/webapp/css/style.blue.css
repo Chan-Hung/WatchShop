@@ -8060,7 +8060,7 @@ fieldset:disabled .btn {
 
 .text-dark {
   --bs-text-opacity: 1;
-  color: rgb(4,185,149) !important;
+  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-black {

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "HomeServlet", value = "")
+@WebServlet(name = "HomeServlet", urlPatterns ={"","/home"})
 public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,7 +28,9 @@ public class HomeServlet extends HttpServlet {
         for (Product product : products) {
             System.out.println(product);
         }
+
         request.setAttribute("productsList", products);
+
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request,response);
