@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'src/main/webapp/public/vendor/swiper/vue/swiper';
 import { isObject, extend } from './utils.js';
 import { paramsList } from './params-list.js';
 

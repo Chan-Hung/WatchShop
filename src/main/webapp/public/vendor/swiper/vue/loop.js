@@ -1,5 +1,5 @@
 import { h } from 'vue';
-import Swiper from 'swiper';
+import Swiper from 'src/main/webapp/public/vendor/swiper/vue/swiper';
 
 function calcLoopedSlides(slides, swiperParams) {
   let slidesPerViewParams = swiperParams.slidesPerView;

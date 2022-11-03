@@ -21,7 +21,7 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/index.jsp";
+        String url = "/public/index.jsp";
         List<Product> products = new ArrayList<>();
         ProductDAO productDAO = new ProductDAO();
         products = productDAO.getAllProduct();

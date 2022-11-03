@@ -348,7 +348,7 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="forms-basic-inputs.html" class="menu-link">
+                    <a href="../../admin/forms-basic-inputs.html" class="menu-link">
                         <div data-i18n="Basic Inputs">Basic Inputs</div>
                     </a>
                 </li>
@@ -366,7 +366,7 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="form-layouts-vertical.html" class="menu-link">
+                    <a href="../../admin/form-layouts-vertical.html" class="menu-link">
                         <div data-i18n="Vertical Form">Vertical Form</div>
                     </a>
                 </li>

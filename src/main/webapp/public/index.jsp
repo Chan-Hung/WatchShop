@@ -32,7 +32,7 @@
 <body>
 <div class="page-holder">
     <%--    Header--%>
-    <%@ include file="common/headerPublic.jsp" %>
+    <%@ include file="../common/public/headerPublic.jsp" %>
     <!--  Modal -->
     <div class="modal fade" id="productView" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -224,7 +224,7 @@
     </div>
 
 <%--        Footer--%>
-        <%@ include file="/common/footerPublic.jsp"%>
+        <%@ include file="/common/public/footerPublic.jsp"%>
 
     <!-- JavaScript files-->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

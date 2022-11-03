@@ -4,18 +4,20 @@ import com.wepr.watchshop.model.Product;
 import com.wepr.watchshop.util.ConnectionUtil;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO {
     public List<Product> getAllProduct() {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
-        String qString =
-                "SELECT u from Product u";
+        String qString = "from Product u";
         TypedQuery<Product> q = em.createQuery(qString, Product.class);
         List<Product> products;
         try {
@@ -28,16 +30,32 @@ public class ProductDAO {
         return products;
     }
 
-//    public static void main(String[] args) {
-//        ProductDAO productDAO = new ProductDAO();
-//        List<Product> products = productDAO.getAllProduct();
-//        for (Product product : products) {
-//            System.out.println(product.getId());
-//            System.out.println(product.getTitle());
-//            System.out.println(product.getDescription());
-//            System.out.println(product.getSize());
-//            System.out.println(product.getColor());
-//            System.out.println(product.getImage());
-//        }
-//    }
+    public Product getProductById(Long productId) {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        Product product;
+        try {
+            product = em.find(Product.class,productId);
+            if (product == null)
+                product = null;
+        } finally {
+            em.close();
+        }
+        return product;
+    }
+
+    public void insertProduct( Product product) {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin();
+            em.persist(product);
+            trans.commit();
+        }catch (Exception e) {
+            e.printStackTrace();
+            trans.rollback();
+        }
+        finally {
+            em.close();
+        }
+    }
 }

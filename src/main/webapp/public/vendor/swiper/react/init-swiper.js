@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'src/main/webapp/public/vendor/swiper/react/swiper';
 import { needsNavigation, needsPagination, needsScrollbar } from './utils.js';
 
 function initSwiper(swiperParams) {

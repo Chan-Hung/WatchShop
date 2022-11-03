@@ -22,7 +22,7 @@ public class ShopServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/shop.jsp";
+        String url = "/public/shop.jsp";
 
         List<Product> products = new ArrayList<>();
         ProductDAO productDAO = new ProductDAO();

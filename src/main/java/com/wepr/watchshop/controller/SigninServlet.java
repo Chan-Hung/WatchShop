@@ -21,7 +21,7 @@ public class SigninServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/signin.jsp";
+        String url = "/public/signin.jsp";
 
         getServletContext()
                 .getRequestDispatcher(url)

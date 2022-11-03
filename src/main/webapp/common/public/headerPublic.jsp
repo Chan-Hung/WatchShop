@@ -13,13 +13,13 @@
             <!-- Link--><a class="nav-link" href="shop">Cửa Hàng</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="detail.html">Nam</a>
+            <!-- Link--><a class="nav-link" href="../../detail.html">Nam</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="detail.html">Nữ</a>
+            <!-- Link--><a class="nav-link" href="../../detail.html">Nữ</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="detail.html">Cặp đôi</a>
+            <!-- Link--><a class="nav-link" href="../../detail.html">Cặp đôi</a>
           </li>
 <%--          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trang</a>--%>
 <%--            <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">--%>
@@ -32,7 +32,7 @@
 <%--          </li>--%>
         </ul>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="cart.html"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ Hàng<small class="text-gray fw-normal">(2)</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="../../cart.html"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ Hàng<small class="text-gray fw-normal">(2)</small></a></li>
           <li class="nav-item"><a class="nav-link" href="signup"> <i class="far fa-fire me-1 text-gray fw-normal"></i>Đăng Ký</a></li>
           <li class="nav-item"><a class="nav-link" href="signin"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng Nhập</a></li>
         </ul>

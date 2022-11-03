@@ -1,7 +1,13 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html
+        lang="en"
+        class="light-style customizer-hide"
+        dir="ltr"
+        data-theme="theme-default"
+        data-assets-path="assets/"
+        data-template="vertical-menu-template-free"
+>
 <head>
   <meta charset="utf-8" />
   <meta
@@ -9,41 +15,41 @@
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
 
-  <title>Đăng ký tài khoản | WatchShop</title>
+  <title>Đăng nhập | WatchShop</title>
 
-  <meta name="description" content="">
+  <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/admin/assets/img/favicon/favicon.ico" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
           href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet"
   />
 
   <!-- Icons. Uncomment required icon fonts -->
-  <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/fonts/boxicons.css" />
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css">
-  <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css">
-  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/css/demo.css" />
 
   <!-- Vendors CSS -->
-  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
   <!-- Page CSS -->
   <!-- Page -->
-  <link rel="stylesheet" href="assets/vendor/css/pages/page-auth.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/pages/page-auth.css" />
   <!-- Helpers -->
-  <script src="assets/vendor/js/helpers.js"></script>
+  <script src="${pageContext.request.contextPath}/admin/assets/vendor/js/helpers.js"></script>
 
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-  <script src="assets/js/config.js"></script>
+  <script src="${pageContext.request.contextPath}/admin/assets/js/config.js"></script>
 </head>
 
 <body>
@@ -52,7 +58,7 @@
 <div class="container-xxl">
   <div class="authentication-wrapper authentication-basic container-p-y">
     <div class="authentication-inner">
-      <!-- Register Card -->
+      <!-- Register -->
       <div class="card">
         <div class="card-body">
           <!-- Logo -->
@@ -113,31 +119,32 @@
                       </g>
                     </svg>
                   </span>
-              <span class="app-brand-text demo text-body fw-bolder">WatchShop</span>
+              <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
             </a>
           </div>
           <!-- /Logo -->
-          <h4 class="mb-2">Cùng trở thành khách hàng thân thiết của WatchShop</h4>
-          <p class="mb-4">Đăng ký tài khoản ngay tại đây</p>
+          <h4 class="mb-2">Chào mừng đến với WatchShop! 👋</h4>
+          <p class="mb-4">Hãy đăng nhập ngay tại đây</p>
 
           <form id="formAuthentication" class="mb-3" action="" method="POST">
             <div class="mb-3">
-              <label for="username" class="form-label">Tên đăng nhập</label>
+              <label for="email" class="form-label">Email</label>
               <input
                       type="text"
                       class="form-control"
-                      id="username"
-                      name="username"
-                      placeholder="Enter your username"
+                      id="email"
+                      name="email-username"
+                      placeholder="Email của bạn"
                       autofocus
               />
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
-            </div>
             <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">Mật khẩu</label>
+              <div class="d-flex justify-content-between">
+                <label class="form-label" for="password">Mật khẩu</label>
+                <a href="admin">
+                  <small>Quên mật khẩu</small>
+                </a>
+              </div>
               <div class="input-group input-group-merge">
                 <input
                         type="password"
@@ -150,35 +157,30 @@
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>
-            <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">Xác nhận mật khẩu</label>
-              <div class="input-group input-group-merge">
-                <input
-                        type="password"
-                        id="password2"
-                        class="form-control"
-                        name="password"
-                        placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                        aria-describedby="password"
-                />
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember-me" />
+                <label class="form-check-label" for="remember-me"> Remember Me </label>
               </div>
             </div>
-            <button class="btn btn-primary d-grid w-100">Đăng ký</button>
+            <div class="mb-3">
+              <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+            </div>
           </form>
 
           <p class="text-center">
-            <span>Đã có tài khoản</span>
-            <a href="signin">
-              <span>Đăng nhập ngay</span>
+            <span>Cùng trở thành khách hàng thân thiết tại cửa hàng chúng tôi</span>
+            <a href="signup">
+              <span>Tạo tài khoản</span>
             </a>
           </p>
         </div>
       </div>
-      <!-- Register Card -->
+      <!-- /Register -->
     </div>
   </div>
 </div>
+
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->

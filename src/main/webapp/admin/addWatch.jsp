@@ -1,5 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
 
-  <title>Quản lý danh mục | WatchShop</title>
+  <title>Thêm đồng hồ | WatchShop</title>
   <%@ include file="../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 
@@ -17,9 +17,11 @@
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar">
   <div class="layout-container">
+    <!-- Menu -->
 
     <%--SideBar--%>
     <%@ include file="../common/admin/sideBarAdmin.jsp" %>
+    <!-- / Menu -->
 
     <!-- Layout container -->
     <div class="layout-page">
@@ -66,10 +68,9 @@
 
             <!-- User -->
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
-              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
-                 data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                 <div class="avatar avatar-online">
-                  <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle"/>
+                  <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                 </div>
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
@@ -78,8 +79,7 @@
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">
-                          <img src="assets/img/avatars/1.png" alt
-                               class="w-px-40 h-auto rounded-circle"/>
+                          <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                         </div>
                       </div>
                       <div class="flex-grow-1">
@@ -136,85 +136,100 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Basic Tables</h4>
-          <!-- Hoverable Table rows -->
-          <div class="card">
-            <h5 class="card-header">Danh sách sản phẩm</h5>
-            <div class="table-responsive text-nowrap">
-              <table class="table table-hover">
-                <thead>
-                <tr>
-                  <th>STT</th>
-                  <th>Tên đồng hồ</th>
-                  <th>Nhãn hiệu</th>
-                  <th>Kính</th>
-                  <th>Giá</th>
-                  <th>Chức năng</th>
-                </tr>
-                </thead>
+          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý Hàng hóa/</span> Thêm đồng hồ</h4>
 
-                <tbody class="table-border-bottom-0">
-                <c:forEach items="${productsList}" var="o">
-                  <tr>
-                    <td>${o.id}</td>
-                    <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>${o.name}</strong>
-                    </td>
-                    <td>${o.brand}</td>
-                    <td>
-                        ${o.glass}
-                    </td>
-                    <td><span class="badge bg-label-success me-1">${o.price}</span></td>
-                    <td>
-                      <div class="dropdown">
-                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                data-bs-toggle="dropdown">
-                          <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="test?action=checkUser&id=${o.id}"
-                          ><i class="bx bx-edit-alt me-1"></i> Chỉnh sửa</a
-                          >
-                          <a class="dropdown-item" href="javascript:void(0);"
-                          ><i class="bx bx-trash me-1"></i> Xóa</a
-                          >
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </c:forEach>
-                </tbody>
-
-              </table>
+          <!-- Basic Layout -->
+          <div class="row">
+            <div class="col-xl">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <form action="watch" method="post">
+                    <div class="mb-3">
+                      <label class="form-label" for="basic-default-fullname">Tên đồng hồ</label>
+                      <input type="text" class="form-control" id="basic-default-fullname" name="name" value="${product.name}" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlSelect1" class="form-label">Danh mục</label>
+                      <select class="form-select" name="category" id="exampleFormControlSelect1" aria-label="Default select example">
+                        <option selected>Chọn danh mục đồng hồ</option>
+                        <option value="1">Nam</option>
+                        <option value="2">Nữ</option>
+                        <option value="3">Cặp đôi</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Thương hiệu</label>
+                      <input type="text" class="form-control" name="brand" value="${product.brand}" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Xuất xứ</label>
+                      <input type="text" class="form-control"  name="origin" value="${product.origin}" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Kính</label>
+                      <input type="text" class="form-control"  name="glass" value="${product.glass}" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Máy</label>
+                      <input type="text" class="form-control"  name="machine" value="${product.machine}" />
+                    </div>
+                    <div class="mb-3">
+                    <label class="form-label" >Đường kính mặt số</label>
+                    <input type="text" class="form-control"  name="diameter" value="${product.diameter}" />
+                  </div>
+                    <div class="mb-3">
+                      <label class="form-label">Khả năng chống nước</label>
+                      <input type="text" class="form-control"  name="waterResistant" value="${product.waterResistant}" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Hình ảnh sản phầm</label>
+                      <input type="text" class="form-control"  name="image" value="${product.image}" />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Giá</label>
+                      <input type="text" class="form-control"  name="price" value="${product.price}" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Thêm</button>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="content-backdrop fade"></div>
         </div>
-        <!-- Content wrapper -->
+        <!-- / Content -->
+
+        <div class="content-backdrop fade"></div>
       </div>
-      <!-- / Layout page -->
+      <!-- Content wrapper -->
     </div>
-
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
+    <!-- / Layout page -->
   </div>
-  <!-- / Layout wrapper -->
 
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="assets/vendor/libs/popper/popper.js"></script>
-  <script src="assets/vendor/js/bootstrap.js"></script>
-  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-  <script src="assets/vendor/js/menu.js"></script>
-  <!-- endbuild -->
-
-  <!-- Vendors JS -->
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js"></script>
-
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Overlay -->
+  <div class="layout-overlay layout-menu-toggle"></div>
 </div>
+<!-- / Layout wrapper -->
+
+
+
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="../assets/vendor/libs/jquery/jquery.js"></script>
+<script src="../assets/vendor/libs/popper/popper.js"></script>
+<script src="../assets/vendor/js/bootstrap.js"></script>
+<script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+<script src="../assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+
+<!-- Vendors JS -->
+
+<!-- Main JS -->
+<script src="../assets/js/main.js"></script>
+
+<!-- Page JS -->
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

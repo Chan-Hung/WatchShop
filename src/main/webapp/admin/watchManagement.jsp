@@ -3,46 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Quản lý Hàng hóa | WatchShop</title>
-
-    <meta name="description" content=""/>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/admin/assets/img/favicon/favicon.ico"/>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet"
-    />
-
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/fonts/boxicons.css"/>
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/core.css" class="template-customizer-core-css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/theme-default.css" class="template-customizer-theme-css"/>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/css/demo.css"/>
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"/>
-
-    <!-- Page CSS -->
-
-    <!-- Helpers -->
-    <script src="${pageContext.request.contextPath}/admin/assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="${pageContext.request.contextPath}/admin/assets/js/config.js"></script>
+    <title>Quản lý hàng hóa | WatchShop</title>
+    <%@ include file="../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 
 <body>
@@ -51,7 +19,7 @@
     <div class="layout-container">
 
         <%--SideBar--%>
-        <%@ include file="../common/sideBarAdmin.jsp" %>
+        <%@ include file="../common/admin/sideBarAdmin.jsp" %>
 
         <!-- Layout container -->
         <div class="layout-page">
@@ -167,19 +135,21 @@
             <div class="content-wrapper">
                 <!-- Content -->
 
+
                 <div class="container-xxl flex-grow-1 container-p-y">
-                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Basic Tables</h4>
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý /</span> Quản lý Hàng hóa</h4>
                     <!-- Hoverable Table rows -->
                     <div class="card">
-                        <h5 class="card-header">Danh sách sản phẩm</h5>
+                        <h5 style="padding-bottom:12px;" class="card-header">Danh sách sản phẩm</h5>
+                        <a style="width:170px;margin-left: 20px;margin-top:0;" class="btn btn-primary" href="watch?action=addWatch">Thêm sản phẩm</a>
                         <div class="table-responsive text-nowrap">
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
                                     <th>STT</th>
                                     <th>Tên đồng hồ</th>
-                                    <th>Nhãn hiệu</th>
-                                    <th>Kính</th>
+                                    <th>Thương hiệu</th>
+                                    <th>Xuất xứ</th>
                                     <th>Giá</th>
                                     <th>Chức năng</th>
                                 </tr>
@@ -203,7 +173,7 @@
                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="watch?action=addWatch&id=${o.id}"
+                                                    <a class="dropdown-item" href="watch?id=${o.id}&action=editWatch"
                                                     ><i class="bx bx-edit-alt me-1"></i> Chỉnh sửa</a
                                                     >
                                                     <a class="dropdown-item" href="javascript:void(0);"

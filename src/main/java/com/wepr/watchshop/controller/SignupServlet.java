@@ -19,7 +19,7 @@ public class SignupServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/signup.jsp";
+        String url = "/public/signup.jsp";
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);

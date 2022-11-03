@@ -16,7 +16,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name = "name", nullable = false, length = 255)
@@ -46,7 +46,7 @@ public class Product {
     @Column(name = "image", nullable = false)
     private String image;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name="category_id", referencedColumnName = "id")
     private Category category;
 }
