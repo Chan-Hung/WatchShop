@@ -123,17 +123,17 @@
             </a>
           </div>
           <!-- /Logo -->
-          <h4 class="mb-2">Chào mừng đến với WatchShop! 👋</h4>
+          <h4 class="mb-2">Chào mừng đến với WatchShop!</h4>
           <p class="mb-4">Hãy đăng nhập ngay tại đây</p>
 
-          <form id="formAuthentication" class="mb-3" action="" method="POST">
+          <form id="formAuthentication" class="mb-3" method="POST">
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input
                       type="text"
                       class="form-control"
                       id="email"
-                      name="email-username"
+                      name="email"
                       placeholder="Email của bạn"
                       autofocus
               />
@@ -141,7 +141,7 @@
             <div class="mb-3 form-password-toggle">
               <div class="d-flex justify-content-between">
                 <label class="form-label" for="password">Mật khẩu</label>
-                <a href="admin">
+                <a href=>
                   <small>Quên mật khẩu</small>
                 </a>
               </div>
@@ -184,18 +184,18 @@
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
-<script src="assets/vendor/libs/jquery/jquery.js"></script>
-<script src="assets/vendor/libs/popper/popper.js"></script>
-<script src="assets/vendor/js/bootstrap.js"></script>
-<script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/popper/popper.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<script src="assets/vendor/js/menu.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/js/menu.js"></script>
 <!-- endbuild -->
 
 <!-- Vendors JS -->
 
 <!-- Main JS -->
-<script src="assets/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/js/main.js"></script>
 
 <!-- Page JS -->
 

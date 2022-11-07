@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!-- navbar-->
 <header class="header bg-white">
   <div class="container px-lg-3">
@@ -33,8 +35,13 @@
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../../cart.html"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ Hàng<small class="text-gray fw-normal">(2)</small></a></li>
+          <c:if test="${user == null}">
           <li class="nav-item"><a class="nav-link" href="signup"> <i class="far fa-fire me-1 text-gray fw-normal"></i>Đăng Ký</a></li>
           <li class="nav-item"><a class="nav-link" href="signin"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng Nhập</a></li>
+          </c:if>
+          <c:if test="${user != null}">
+            <li class="nav-item"><a class="nav-link"> <i class="fas fa-user me-1 text-gray fw-normal"></i>${user.userName}</a></li>
+          </c:if>
         </ul>
       </div>
     </nav>

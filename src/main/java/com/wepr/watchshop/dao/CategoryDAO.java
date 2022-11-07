@@ -9,7 +9,6 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class CategoryDAO {
-
     public Category getCategoryById(Long categoryId){
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
         Category category;
