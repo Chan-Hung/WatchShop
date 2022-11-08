@@ -12,7 +12,7 @@
             <!-- Link--><a class="nav-link active" href="home">Trang Chủ</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="shop">Cửa Hàng</a>
+            <!-- Link--><a class="nav-link" href="shop?page=1">Cửa Hàng</a>
           </li>
           <li class="nav-item">
             <!-- Link--><a class="nav-link" href="../../detail.html">Nam</a>

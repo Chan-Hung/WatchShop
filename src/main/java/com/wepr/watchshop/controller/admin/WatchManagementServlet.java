@@ -1,9 +1,11 @@
 package com.wepr.watchshop.controller.admin;
 
 import com.wepr.watchshop.dao.CategoryDAO;
+import com.wepr.watchshop.dao.ProductImageDAO;
 import com.wepr.watchshop.dao.ProductDAO;
 import com.wepr.watchshop.model.Category;
 import com.wepr.watchshop.model.Product;
+import com.wepr.watchshop.model.ProductImage;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -47,10 +49,8 @@ public class WatchManagementServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url = null;
-        String action = request.getParameter("action");
-        response.setContentType("text/html");
-        response.setCharacterEncoding("UTF-8");
         request.setCharacterEncoding("UTF-8");
+        String action = request.getParameter("action");
         if(action.equals("addWatch")){
             try {
                 url = addWatch(request, response);
@@ -87,7 +87,8 @@ public class WatchManagementServlet extends HttpServlet {
         String machine = request.getParameter("machine");
         String diameter = request.getParameter("diameter");
         String waterResistant = request.getParameter("waterResistant");
-        String image = request.getParameter("image");
+        String images = request.getParameter("image");
+        String description = request.getParameter("description");
         Long price = Long.parseLong(request.getParameter("price"));
 
 
@@ -99,15 +100,36 @@ public class WatchManagementServlet extends HttpServlet {
         product.setMachine(machine);
         product.setDiameter(diameter);
         product.setWaterResistant(waterResistant);
+        product.setDescription(description);
         product.setPrice(price);
+
+
 
         //Select category from input
         CategoryDAO categoryDAO = new CategoryDAO();
         Category category = categoryDAO.getCategoryById(Long.parseLong(categoryId));
-
         product.setCategory(category);
-        product.setImage(image);
+
+        //Insert product in DB
         productDAO.insertProduct(product);
+
+
+        System.out.println(product);
+
+        ProductImageDAO productImageDAO = new ProductImageDAO();
+
+        String[] imagePaths = images.split(", ");
+        for(int i = 0; i < imagePaths.length; i++) {
+            ProductImage productImage = new ProductImage();
+            productImage.setPath(imagePaths[i]);
+            productImage.setProduct(product);
+
+            //Set first image as a thumbnail
+            if(i == 0) productImage.setIsThumbnail(true);
+
+            productImageDAO.insertProductImage(productImage);
+        }
+
         return "/admin/watchManagement.jsp";
     }
 }

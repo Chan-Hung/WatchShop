@@ -135,7 +135,6 @@
   </div>
 </div>
 
-
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
 <script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/jquery/jquery.js"></script>

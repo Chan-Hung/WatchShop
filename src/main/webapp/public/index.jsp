@@ -1,33 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WatchShop | Ecommerce shop from Group15</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- gLightbox gallery-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/glightbox/css/glightbox.min.css">
-    <!-- Range slider-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/nouislider/nouislider.min.css">
-    <!-- Choices CSS-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/choices.js/public/assets/styles/choices.min.css">
-    <!-- Swiper slider-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/swiper/swiper-bundle.min.css">
-    <!-- Google fonts-->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/public/img/favicon.png">
+    <%@ include file="../common/public/headerLibraryPublic.jsp"%>
 </head>
 <body>
 <div class="page-holder">
@@ -126,14 +104,18 @@
                 <h2 class="h5 text-uppercase mb-4">Đồng Hồ Citizen</h2>
             </header>
             <div class="row">
-                <c:forEach items="${productsList}" var="o" begin="1" end="8">
+                <c:forEach items="${citizenProducts}" var="product">
                     <!-- PRODUCT-->
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="product text-center">
                             <div class="position-relative mb-3">
                                 <div class="badge text-white bg-"></div>
-                                <a class="d-block" href="detail.html"><img class="img-fluid w-100" src="${o.image}"
-                                                                           alt="..."></a>
+                                <c:forEach items="${product.productImageList}" var="image">
+                                    <c:if test="${image.isThumbnail == true}">
+                                        <a class="d-block" href="product?id=${product.id}">
+                                            <img class="img-fluid w-100" src="${image.path}" alt="..."></a>
+                                    </c:if>
+                                </c:forEach>
                                 <div class="product-overlay">
                                     <ul class="mb-0 list-inline">
                                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
@@ -147,8 +129,52 @@
                                     </ul>
                                 </div>
                             </div>
-                            <h6><a class="reset-anchor" href="detail.html">${o.name}</a></h6>
-                            <p class="small text-muted">${o.price}</p>
+                            <h6><a class="reset-anchor" href="product?id=${product.id}">${product.name}</a></h6>
+                            <p class="small text-muted">
+<%--                                Format VietNamDong Currency--%>
+                                <fmt:setLocale value = "vi_VN"/>
+                                <fmt:formatNumber value = "${product.price}" type = "currency"/>
+                            </p>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+            <header>
+                <!-- <p class="small text-muted small text-uppercase mb-1">Made the hard way</p> -->
+                <h2 class="h5 text-uppercase mb-4">Đồng Hồ Casio</h2>
+            </header>
+            <div class="row">
+                <c:forEach items="${casioProducts}" var="product">
+                    <!-- PRODUCT-->
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="product text-center">
+                            <div class="position-relative mb-3">
+                                <div class="badge text-white bg-"></div>
+                                <c:forEach items="${product.productImageList}" var="image">
+                                    <c:if test="${image.isThumbnail == true}">
+                                        <a class="d-block" href="product?id=${product.id}">
+                                            <img class="img-fluid w-100" src="${image.path}" alt="..."></a>
+                                    </c:if>
+                                </c:forEach>
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
+                                                                                href="#!"><i
+                                                class="far fa-heart"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
+                                                                                href="cart.html">Add to cart</a></li>
+                                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark"
+                                                                             href="#productView" data-bs-toggle="modal"><i
+                                                class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h6><a class="reset-anchor" href="product?id=${product.id}">${product.name}</a></h6>
+                            <p class="small text-muted">
+                                    <%--                                Format VietNamDong Currency--%>
+                                <fmt:setLocale value = "vi_VN"/>
+                                <fmt:formatNumber value = "${product.price}" type = "currency"/>
+                            </p>
                         </div>
                     </div>
                 </c:forEach>
@@ -223,8 +249,8 @@
         </section>
     </div>
 
-<%--        Footer--%>
-        <%@ include file="/common/public/footerPublic.jsp"%>
+    <%--        Footer--%>
+    <%@ include file="/common/public/footerPublic.jsp" %>
 
     <!-- JavaScript files-->
     <script src="${pageContext.request.contextPath}/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

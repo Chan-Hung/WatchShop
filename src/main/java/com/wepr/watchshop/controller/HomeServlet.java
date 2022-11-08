@@ -22,14 +22,20 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url = "/public/index.jsp";
-        List<Product> products = new ArrayList<>();
         ProductDAO productDAO = new ProductDAO();
-        products = productDAO.getAllProduct();
-        for (Product product : products) {
-            System.out.println(product);
-        }
 
-        request.setAttribute("productsList", products);
+        //Show products from Citizen brand
+        List<Product> citizenProducts;
+        citizenProducts = productDAO.getProductsFromBrand("Citizen");
+        //Set request for citizen products
+        request.setAttribute("citizenProducts", citizenProducts);
+
+
+        //Show products from Casio brand
+        List<Product> casioProducts;
+        casioProducts = productDAO.getProductsFromBrand("Casio");
+        //Set request for citizen products
+        request.setAttribute("casioProducts", casioProducts);
 
         getServletContext()
                 .getRequestDispatcher(url)

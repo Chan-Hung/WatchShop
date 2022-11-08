@@ -1,12 +1,15 @@
 package com.wepr.watchshop.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -40,13 +43,18 @@ public class Product {
     @Column(name = "diameter", nullable = false)
     private String diameter;
 
+    @Lob
+    @Type(type = "org.hibernate.type.TextType")
+    private String description;
+
     @Column(name = "price", nullable = false)
     private Long price;
 
-    @Column(name = "image", nullable = false)
-    private String image;
-
     @ManyToOne()
     @JoinColumn(name="category_id", referencedColumnName = "id")
+    @JsonIgnore
     private Category category;
+
+    @OneToMany(mappedBy = "product",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<ProductImage> productImageList;
 }

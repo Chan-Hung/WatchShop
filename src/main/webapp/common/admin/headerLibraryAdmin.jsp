@@ -1,36 +1,38 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-    <meta name="description" content="" />
+<%@ page contentType="text/html; charset=UTF-8" %>
+<meta name="description" content=""/>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/admin/assets/img/favicon/favicon.ico" />
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/admin/assets/img/favicon/favicon.ico"/>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet"
-    />
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet"
+/>
 
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/fonts/boxicons.css" />
+<!-- Icons. Uncomment required icon fonts -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/fonts/boxicons.css"/>
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/css/demo.css" />
+<!-- Core CSS -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/core.css"
+      class="template-customizer-core-css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/css/theme-default.css"
+      class="template-customizer-theme-css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/css/demo.css"/>
 
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+<!-- Vendors CSS -->
+<link rel="stylesheet"
+      href="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"/>
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/libs/apex-charts/apex-charts.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/assets/vendor/libs/apex-charts/apex-charts.css"/>
 
-    <!-- Page CSS -->
+<!-- Page CSS -->
 
-    <!-- Helpers -->
-    <script src="${pageContext.request.contextPath}/admin/assets/vendor/js/helpers.js"></script>
+<!-- Helpers -->
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/js/helpers.js"></script>
 
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="${pageContext.request.contextPath}/admin/assets/js/config.js"></script>
+<!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+<!--? Config: Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file. -->
+<script src="${pageContext.request.contextPath}/admin/assets/js/config.js"></script>

@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +14,9 @@
 </head>
 
 <body>
+<%
+  request.setCharacterEncoding("UTF-8");
+%>
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar">
   <div class="layout-container">
@@ -144,6 +147,7 @@
               <div class="card mb-4">
                 <div class="card-body">
                   <form action="watch" method="post">
+                    <input type="hidden" name="action" value="addWatch">
                     <div class="mb-3">
                       <label class="form-label" for="basic-default-fullname">Tên đồng hồ</label>
                       <input type="text" class="form-control" id="basic-default-fullname" name="name" value="${product.name}" />
@@ -182,8 +186,14 @@
                       <input type="text" class="form-control"  name="waterResistant" value="${product.waterResistant}" />
                     </div>
                     <div class="mb-3">
+                      <label class="form-label">Mô tả sản phẩm</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" value="${product.description}"></textarea>
+<%--                      <input type="text" class="form-control"  name="description" value="${product.description}" />--%>
+                    </div>
+                    <div class="mb-3">
                       <label class="form-label">Hình ảnh sản phầm</label>
-                      <input type="text" class="form-control"  name="image" value="${product.image}" />
+                      <textarea class="form-control" rows="3" name="image" value="${product.image}"></textarea>
+<%--                      <input type="text" class="form-control"  name="image" value="${product.image}" />--%>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Giá</label>
@@ -214,18 +224,18 @@
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
-<script src="../assets/vendor/libs/jquery/jquery.js"></script>
-<script src="../assets/vendor/libs/popper/popper.js"></script>
-<script src="../assets/vendor/js/bootstrap.js"></script>
-<script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/popper/popper.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/js/bootstrap.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<script src="../assets/vendor/js/menu.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/vendor/js/menu.js"></script>
 <!-- endbuild -->
 
 <!-- Vendors JS -->
 
 <!-- Main JS -->
-<script src="../assets/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/admin/assets/js/main.js"></script>
 
 <!-- Page JS -->
 

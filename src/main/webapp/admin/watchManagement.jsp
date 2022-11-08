@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -156,16 +157,16 @@
                                 </thead>
 
                                 <tbody class="table-border-bottom-0">
-                                <c:forEach items="${productsList}" var="o">
+                                <c:forEach items="${productsList}" var="product" varStatus="loop">
                                     <tr>
-                                        <td>${o.id}</td>
-                                        <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>${o.name}</strong>
+                                        <td>${loop.index+1}</td>
+                                        <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>${product.name}</strong>
                                         </td>
-                                        <td>${o.brand}</td>
+                                        <td>${product.brand}</td>
                                         <td>
-                                                ${o.glass}
+                                                ${product.glass}
                                         </td>
-                                        <td><span class="badge bg-label-success me-1">${o.price}</span></td>
+                                        <td><span class="badge bg-label-success me-1">${product.price}</span></td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
@@ -173,7 +174,7 @@
                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="watch?id=${o.id}&action=editWatch"
+                                                    <a class="dropdown-item" href="watch?id=${product.id}&action=editWatch"
                                                     ><i class="bx bx-edit-alt me-1"></i> Chỉnh sửa</a
                                                     >
                                                     <a class="dropdown-item" href="javascript:void(0);"
@@ -203,18 +204,18 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <script src="assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="assets/vendor/libs/popper/popper.js"></script>
-    <script src="assets/vendor/js/bootstrap.js"></script>
-    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/popper/popper.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/assets/vendor/js/bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-    <script src="assets/vendor/js/menu.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/admin/assets/js/main.js"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </div>

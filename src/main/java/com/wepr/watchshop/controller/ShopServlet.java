@@ -24,14 +24,18 @@ public class ShopServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url = "/public/shop.jsp";
 
-        List<Product> products = new ArrayList<>();
+        List<Product> products;
+        Integer page = Integer.valueOf(request.getParameter("page"));
+        if(page == null)
+            page = 1;
+
         ProductDAO productDAO = new ProductDAO();
-        products = productDAO.getAllProduct();
+        products = productDAO.getAllProductPaging(page);
         for (Product product : products) {
             System.out.println(product);
         }
         request.setAttribute("productsList", products);
-
+        request.setAttribute("page", page);
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
