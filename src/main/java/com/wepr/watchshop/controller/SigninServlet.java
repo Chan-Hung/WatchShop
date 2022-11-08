@@ -47,8 +47,17 @@ public class SigninServlet extends HttpServlet {
             session.setAttribute("user", user);
 
             ProductDAO productDAO = new ProductDAO();
-            List<Product> products = productDAO.getAllProduct();
-            request.setAttribute("productsList", products);
+            //Show products from Citizen brand
+            List<Product> citizenProducts;
+            citizenProducts = productDAO.getProductsFromBrand("Citizen");
+            //Set request for citizen products
+            request.setAttribute("citizenProducts", citizenProducts);
+
+            //Show products from Casio brand
+            List<Product> casioProducts;
+            casioProducts = productDAO.getProductsFromBrand("Casio");
+            //Set request for citizen products
+            request.setAttribute("casioProducts", casioProducts);
         }
         getServletContext()
                 .getRequestDispatcher(url)

@@ -15,13 +15,13 @@
             <!-- Link--><a class="nav-link" href="shop?page=1">Cửa Hàng</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="../../detail.html">Nam</a>
+            <!-- Link--><a class="nav-link" href="shop?category=men&page=1">Nam</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="../../detail.html">Nữ</a>
+            <!-- Link--><a class="nav-link" href="shop?category=women&page=1">Nữ</a>
           </li>
           <li class="nav-item">
-            <!-- Link--><a class="nav-link" href="../../detail.html">Cặp đôi</a>
+            <!-- Link--><a class="nav-link" href="shop?category=couple&page=1">Cặp đôi</a>
           </li>
 <%--          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trang</a>--%>
 <%--            <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown">--%>

@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class ProductDAO {
@@ -31,6 +32,24 @@ public class ProductDAO {
         return products;
     }
 
+    public List<Product> getAllProductPagingByCategory(Integer page, Long id) {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        String qString = "SELECT e FROM Product e INNER JOIN e.category t where t.id=:id";
+        TypedQuery<Product> q = em.createQuery(qString, Product.class);
+        q.setParameter("id", id);
+        List<Product> products;
+        try {
+            products = q
+                    .setMaxResults(9)
+                    .setFirstResult((page-1)*9) //Position start at 0, 9, 18,...depending on input pages
+                    .getResultList();
+            if (products == null || products.isEmpty())
+                products = null;
+        } finally {
+            em.close();
+        }
+        return products;
+    }
 
     public List<Product> getAllProduct() {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();

@@ -177,6 +177,7 @@
             </div>
             <div class="row">
               <!-- PRODUCT-->
+
               <c:forEach items="${productsList}" var="product">
               <div class="col-lg-4 col-sm-6">
                 <div class="product text-center">
@@ -189,8 +190,6 @@
                         <a class="d-block" href="product?id=${product.id}"><img class="img-fluid w-100" src="${image.path}" alt="..."></a>
                       </c:if>
                     </c:forEach>
-
-<%--                    <a class="d-block" href="product?id=${product.id}"><img class="img-fluid w-100" src="${product.image}" alt="..."></a>--%>
 
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">

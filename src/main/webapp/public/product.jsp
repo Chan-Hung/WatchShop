@@ -1,41 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>${product.name}| WatchShop</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- gLightbox gallery-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/glightbox/css/glightbox.min.css">
-    <!-- Range slider-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/nouislider/nouislider.min.css">
-    <!-- Choices CSS-->
-    <link rel="stylesheet"
-          href="${pageContext.request.contextPath}/public/vendor/choices.js/public/assets/styles/choices.min.css">
-    <!-- Swiper slider-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/vendor/swiper/swiper-bundle.min.css">
-    <!-- Google fonts-->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/custom.css">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="${pageContext.request.contextPath}/public/img/favicon.png">
+    <title>${product.name} | WatchShop</title>
+    <%@ include file="../common/public/headerLibraryPublic.jsp"%>
 </head>
 <body>
 <div class="page-holder bg-light">
     <!-- navbar-->
     <%@ include file="../common/public/headerPublic.jsp" %>
-
     <!--  Modal -->
     <div class="modal fade" id="productView" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -170,7 +146,11 @@
                         <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
                     </ul>
                     <h1>${product.name}</h1>
-                    <p class="text-muted lead">${product.price} VNĐ</p>
+                    <p class="text-muted lead">
+                        <%--Format VietNamDong Currency--%>
+                        <fmt:setLocale value = "vi_VN"/>
+                        <fmt:formatNumber value = "${product.price}" type = "currency"/>
+                    </p>
                     <p class="text-sm mb-4">${product.description}</p>
                     <div class="row align-items-stretch mb-4">
                         <div class="col-sm-5 pr-sm-0">

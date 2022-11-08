@@ -187,7 +187,7 @@
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Hình ảnh sản phầm</label>
-                      <input type="text" class="form-control"  name="image" value="${product.image}" />
+                      <input type="text" class="form-control"  name="image" value="${product.productImageList}" />
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Giá</label>
