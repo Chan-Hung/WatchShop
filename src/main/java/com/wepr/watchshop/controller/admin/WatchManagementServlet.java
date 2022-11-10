@@ -1,46 +1,61 @@
 package com.wepr.watchshop.controller.admin;
 
 import com.wepr.watchshop.dao.CategoryDAO;
-import com.wepr.watchshop.dao.ProductImageDAO;
 import com.wepr.watchshop.dao.ProductDAO;
+import com.wepr.watchshop.dao.ProductImageDAO;
 import com.wepr.watchshop.model.Category;
 import com.wepr.watchshop.model.Product;
 import com.wepr.watchshop.model.ProductImage;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "WatchManagementServlet", value = "/watch")
 public class WatchManagementServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/admin/watchManagement.jsp";
+        String url = "/admin/watchManagement/watchManagement.jsp";
         String action = request.getParameter("action");
         ProductDAO productDAO = new ProductDAO();
+        String page = request.getParameter("page");
+
+        if(page == null)
+            page = "1";
+
+        Integer paging = Integer.valueOf(page);
+
+
         //Default action
         if (action == null) {
             action = "watchManagement";
         }
 
-        //2 URLs
-        if (action.equals("watchManagement")) {
-            url = "/admin/watchManagement.jsp";
-            List<Product> products = productDAO.getAllProduct();
-            request.setAttribute("productsList", products);
+        //2 URLs -  Switch case for actions
+        switch (action) {
+            case "watchManagement":
+                url = "/admin/watchManagement/watchManagement.jsp";
+                List<Product> products = productDAO.getAllProductPaging(paging);
+                request.setAttribute("productsList", products);
+                break;
 
-        } else if (action.equals("addWatch")) {
-            url = "/admin/addWatch.jsp";
-        }else if (action.equals("editWatch")){
-            url = "/admin/editWatch.jsp";
-            String id = request.getParameter("id");
-            Product product = productDAO.getProductById(Long.parseLong(id));
-            request.setAttribute("product", product);
+            case "viewWatch":
+                url = "/admin/watchManagement/viewWatch.jsp";
+                String id = request.getParameter("id");
+                Product product = productDAO.getProductById(Long.parseLong(id));
+                request.setAttribute("product", product);
+                break;
+
+            case "addWatch":
+                url = "/admin/watchManagement/addWatch.jsp";
+                break;
         }
+        request.setAttribute("page", paging);
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
@@ -51,15 +66,16 @@ public class WatchManagementServlet extends HttpServlet {
         String url = null;
         request.setCharacterEncoding("UTF-8");
         String action = request.getParameter("action");
+
         if(action.equals("addWatch")){
             try {
-                url = addWatch(request, response);
+                url = addWatch(request);
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }else if (action.equals("editWatch")){
             try {
-                url = addWatch(request, response);
+                url = addWatch(request);
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
@@ -73,8 +89,7 @@ public class WatchManagementServlet extends HttpServlet {
                 .forward(request, response);
     }
 
-    private String addWatch(HttpServletRequest request,
-                            HttpServletResponse response) throws SQLException, ClassNotFoundException {
+    private String addWatch(HttpServletRequest request) throws SQLException, ClassNotFoundException {
 
         ProductDAO productDAO = new ProductDAO();
         // get the user data
@@ -130,6 +145,6 @@ public class WatchManagementServlet extends HttpServlet {
             productImageDAO.insertProductImage(productImage);
         }
 
-        return "/admin/watchManagement.jsp";
+        return "/admin/watchManagement/watchManagement.jsp";
     }
 }

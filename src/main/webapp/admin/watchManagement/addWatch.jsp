@@ -10,7 +10,7 @@
   />
 
   <title>Thêm đồng hồ | WatchShop</title>
-  <%@ include file="../common/admin/headerLibraryAdmin.jsp"%>
+  <%@ include file="../../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     <!-- Menu -->
 
     <%--SideBar--%>
-    <%@ include file="../common/admin/sideBarAdmin.jsp" %>
+    <%@ include file="../../common/admin/sideBarAdmin.jsp" %>
     <!-- / Menu -->
 
     <!-- Layout container -->

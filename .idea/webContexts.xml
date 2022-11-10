@@ -4,10 +4,13 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/admin/forms-basic-inputs.html" value="file://$PROJECT_DIR$/src/main/webapp/admin" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/admin/ui-pagination-breadcrumbs.html" value="file://$PROJECT_DIR$/src/main/webapp/admin" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/admin/watchManagement/viewWatch.jsp" value="file://$PROJECT_DIR$/src/main/webapp/admin/watchManagement" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/common/public/headerLibraryPublic.jsp" value="file://$PROJECT_DIR$/src/main/webapp/common/public" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/common/public/headerPublic.jsp" value="file://$PROJECT_DIR$/src/main/webapp/common/public" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/public/checkout.html" value="file://$PROJECT_DIR$/src/main/webapp/public" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/public/product.jsp" value="file://$PROJECT_DIR$/src/main/webapp/public" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/public/shop.jsp" value="file://$PROJECT_DIR$/src/main/webapp/public" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/tables-basic.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/test.html" value="file://$PROJECT_DIR$/src/main/webapp" />
       </map>

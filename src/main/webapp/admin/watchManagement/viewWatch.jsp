@@ -9,8 +9,8 @@
             content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Chỉnh sửa thông tin | WatchShop</title>
-    <%@ include file="../common/admin/headerLibraryAdmin.jsp"%>
+    <title>Chỉnh sửa sản phẩm | WatchShop</title>
+    <%@ include file="../../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <!-- Menu -->
 
     <%--SideBar--%>
-    <%@ include file="../common/admin/sideBarAdmin.jsp" %>
+    <%@ include file="../../common/admin/sideBarAdmin.jsp" %>
     <!-- / Menu -->
 
     <!-- Layout container -->
@@ -136,65 +136,83 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý Hàng hóa/</span> Thêm đồng hồ</h4>
-
+          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">
+            <a class="fw-bold" href="watch">Quản lý Hàng hóa/</a></span> Chi tiết sản phẩm</h4>
           <!-- Basic Layout -->
           <div class="row">
             <div class="col-xl">
               <div class="card mb-4">
                 <div class="card-body">
-                  <form action="watch" method="post">
                     <div class="mb-3">
-                      <label class="form-label" for="basic-default-fullname">Tên đồng hồ</label>
-                      <input type="text" class="form-control" id="basic-default-fullname" name="name" value="${product.name}" />
+                      <label class="form-label" >Tên đồng hồ</label>
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.name}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleFormControlSelect1" class="form-label">Danh mục</label>
-                      <select class="form-select" name="category" id="exampleFormControlSelect1" aria-label="Default select example">
-                        <option selected>Chọn danh mục đồng hồ</option>
-                        <option value="1">Nam</option>
-                        <option value="2">Nữ</option>
-                        <option value="3">Cặp đôi</option>
-                      </select>
+                      <label class="form-label">Danh mục</label>
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.category.name}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Thương hiệu</label>
-                      <input type="text" class="form-control" name="brand" value="${product.brand}" />
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.brand}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Xuất xứ</label>
-                      <input type="text" class="form-control"  name="origin" value="${product.origin}" />
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.origin}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Kính</label>
-                      <input type="text" class="form-control"  name="glass" value="${product.glass}" />
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.glass}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Máy</label>
-                      <input type="text" class="form-control"  name="machine" value="${product.machine}" />
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.machine}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                     <label class="form-label" >Đường kính mặt số</label>
-                    <input type="text" class="form-control"  name="diameter" value="${product.diameter}" />
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.diameter}"/>
+                        </span>
                   </div>
                     <div class="mb-3">
                       <label class="form-label">Khả năng chống nước</label>
-                      <input type="text" class="form-control"  name="waterResistant" value="${product.waterResistant}" />
+                        <span type="text" class="form-control" readonly>
+                            <c:out value = "${product.waterResistant}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Mô tả sản phẩm</label>
-                      <input type="text" class="form-control"  name="description" value="${product.description}" />
+                      <span type="text" rows="7" class="form-control" readonly>
+                            <c:out value = "${product.description}"/>
+                        </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Hình ảnh sản phầm</label>
-                      <input type="text" class="form-control"  name="image" value="${product.productImageList}" />
+                      <span class="form-control" >
+                            <c:forEach var="image" items="${product.productImageList}">
+                              <img src="${image.path}" width="150" height="150" alt="${image.id}"/>
+                            </c:forEach>
+                      </span>
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Giá</label>
-                      <input type="text" class="form-control"  name="price" value="${product.price}" />
+                      <span type="text" rows="7" class="form-control" readonly>
+                            <c:out value = "${product.price}"/>
+                      </span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Thêm</button>
-                  </form>
+                  <a style="width:100px;margin-top:0" class="btn btn-primary" href="watch">Quay về</a>
+
                 </div>
               </div>
             </div>

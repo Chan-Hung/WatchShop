@@ -11,7 +11,7 @@
     />
 
     <title>Quản lý hàng hóa | WatchShop</title>
-    <%@ include file="../common/admin/headerLibraryAdmin.jsp"%>
+    <%@ include file="../../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div class="layout-container">
 
         <%--SideBar--%>
-        <%@ include file="../common/admin/sideBarAdmin.jsp" %>
+        <%@ include file="../../common/admin/sideBarAdmin.jsp" %>
 
         <!-- Layout container -->
         <div class="layout-page">
@@ -70,7 +70,7 @@
                             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                data-bs-toggle="dropdown">
                                 <div class="avatar avatar-online">
-                                    <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle"/>
+                                    <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle"/>
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -79,7 +79,7 @@
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
                                                 <div class="avatar avatar-online">
-                                                    <img src="assets/img/avatars/1.png" alt
+                                                    <img src="../assets/img/avatars/1.png" alt
                                                          class="w-px-40 h-auto rounded-circle"/>
                                                 </div>
                                             </div>
@@ -150,7 +150,7 @@
                                     <th>STT</th>
                                     <th>Tên đồng hồ</th>
                                     <th>Thương hiệu</th>
-                                    <th>Xuất xứ</th>
+                                    <th>Số lượng</th>
                                     <th>Giá</th>
                                     <th>Chức năng</th>
                                 </tr>
@@ -174,6 +174,9 @@
                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                 </button>
                                                 <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="watch?id=${product.id}&action=viewWatch"
+                                                    ><i class="bx bx-edit-alt me-1"></i>Chi tiết sản phẩm</a
+                                                    >
                                                     <a class="dropdown-item" href="watch?id=${product.id}&action=editWatch"
                                                     ><i class="bx bx-edit-alt me-1"></i> Chỉnh sửa</a
                                                     >
@@ -186,10 +189,41 @@
                                     </tr>
                                 </c:forEach>
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
+                    <br>
+<%--                    //Pagination with JSTL core tag - Using c:choose+c:when:c:otherwise--%>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-end">
+                            <c:if test="${page != 1}">
+                                <li><a href="watch?page=${page - 1}">
+                                    <i class="tf-icon bx bx-chevrons-left"></i></a>
+                                </li>
+                            </c:if>
+                            <c:forEach begin="1" end="3" var="i">
+                                <c:choose>
+                                    <c:when test="${page == i}">
+                                        <li class="page-item active">
+                                            <a class="page-link" href="watch?page=${i}">${i}</a>
+                                        </li>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <li class="page-item">
+                                            <a class="page-link" href="watch?page=${i}">${i}</a>
+                                        </li>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
+                            <c:if test="${page != 3}">
+                                <li class="page-item next">
+                                    <a class="page-link" href="watch?page=${i+1}"
+                                    ><i class="tf-icon bx bx-chevrons-right"></i
+                                    ></a>
+                                </li>
+                            </c:if>
+                        </ul>
+                    </nav>
                     <div class="content-backdrop fade"></div>
                 </div>
                 <!-- Content wrapper -->

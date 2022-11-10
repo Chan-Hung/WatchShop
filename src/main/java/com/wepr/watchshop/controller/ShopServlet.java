@@ -24,25 +24,26 @@ public class ShopServlet extends HttpServlet {
 
         ProductDAO productDAO = new ProductDAO();
         List<Product> products = null;
-        Integer page = Integer.valueOf(request.getParameter("page"));
+        String page = request.getParameter("page");
         if(page == null)
-            page = 1;
+            page = "1";
 
+        Integer paging = Integer.valueOf(page);
         String category = request.getParameter("category");
 
         //If we don't have explicit category => Get all products
         if (category == null) {
-            products = productDAO.getAllProductPaging(page);
+            products = productDAO.getAllProductPaging(paging);
             for (Product product : products) {
                 System.out.println(product);
             }
         }
         else if (category.equals("men"))
-            products = productDAO.getAllProductPagingByCategory(page, 1L);
+            products = productDAO.getAllProductPagingByCategory(paging, 1L);
          else if (category.equals("women"))
-            products = productDAO.getAllProductPagingByCategory(page, 2L);
+            products = productDAO.getAllProductPagingByCategory(paging, 2L);
          else if(category.equals("couple"))
-            products = productDAO.getAllProductPagingByCategory(page, 3L);
+            products = productDAO.getAllProductPagingByCategory(paging, 3L);
 
         request.setAttribute("productsList", products);
         request.setAttribute("page", page);
