@@ -1,29 +1,13 @@
 package com.wepr.watchshop.dao;
 
-import com.wepr.watchshop.model.Product;
 import com.wepr.watchshop.model.User;
 import com.wepr.watchshop.util.ConnectionUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
-import java.util.List;
 
 public class UserDAO {
-    public List<User> getAllUsers() {
-        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
-        String qString = "from User u";
-        TypedQuery<User> q = em.createQuery(qString, User.class);
-        List<User> users;
-        try {
-            users = q.getResultList();
-            if (users == null || users.isEmpty())
-                users = null;
-        } finally {
-            em.close();
-        }
-        return users;
-    }
 
     public void insertUser(User user) {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();

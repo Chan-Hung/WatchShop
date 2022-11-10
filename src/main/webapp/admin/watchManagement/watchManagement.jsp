@@ -197,7 +197,7 @@
                     <nav aria-label="Page navigation">
                         <ul class="pagination justify-content-end">
                             <c:if test="${page != 1}">
-                                <li><a href="watch?page=${page - 1}">
+                                <li><a class="page-link"  href="watch?page=${page - 1}">
                                     <i class="tf-icon bx bx-chevrons-left"></i></a>
                                 </li>
                             </c:if>

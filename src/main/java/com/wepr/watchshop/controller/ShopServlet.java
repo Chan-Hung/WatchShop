@@ -28,12 +28,12 @@ public class ShopServlet extends HttpServlet {
         if(page == null)
             page = "1";
 
-        Integer paging = Integer.valueOf(page);
+        int paging = Integer.parseInt(page);
         String category = request.getParameter("category");
 
         //If we don't have explicit category => Get all products
         if (category == null) {
-            products = productDAO.getAllProductPaging(paging);
+            products = productDAO.getAllProductPaging(paging, 9);
             for (Product product : products) {
                 System.out.println(product);
             }

@@ -1,4 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -208,7 +210,8 @@
                     <div class="mb-3">
                       <label class="form-label">Giá</label>
                       <span type="text" rows="7" class="form-control" readonly>
-                            <c:out value = "${product.price}"/>
+                        <fmt:setLocale value = "vi_VN"/>
+                        <fmt:formatNumber value = "${product.price}" type = "currency"/>
                       </span>
                     </div>
                   <a style="width:100px;margin-top:0" class="btn btn-primary" href="watch">Quay về</a>

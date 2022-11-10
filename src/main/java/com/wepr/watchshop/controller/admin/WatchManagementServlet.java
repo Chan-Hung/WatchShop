@@ -28,7 +28,7 @@ public class WatchManagementServlet extends HttpServlet {
         if(page == null)
             page = "1";
 
-        Integer paging = Integer.valueOf(page);
+        int paging = Integer.parseInt(page);
 
 
         //Default action
@@ -40,7 +40,8 @@ public class WatchManagementServlet extends HttpServlet {
         switch (action) {
             case "watchManagement":
                 url = "/admin/watchManagement/watchManagement.jsp";
-                List<Product> products = productDAO.getAllProductPaging(paging);
+                //8 lines per page
+                List<Product> products = productDAO.getAllProductPaging(paging,8);
                 request.setAttribute("productsList", products);
                 break;
 

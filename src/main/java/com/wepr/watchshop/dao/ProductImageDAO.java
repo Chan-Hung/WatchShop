@@ -1,6 +1,5 @@
 package com.wepr.watchshop.dao;
 
-import com.wepr.watchshop.model.Product;
 import com.wepr.watchshop.model.ProductImage;
 import com.wepr.watchshop.util.ConnectionUtil;
 

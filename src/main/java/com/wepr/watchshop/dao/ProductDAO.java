@@ -1,28 +1,23 @@
 package com.wepr.watchshop.dao;
 
 import com.wepr.watchshop.model.Product;
-import com.wepr.watchshop.model.ProductImage;
 import com.wepr.watchshop.util.ConnectionUtil;
 
-import javax.persistence.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class ProductDAO {
-        public List<Product> getAllProductPaging(Integer page) {
+        public List<Product> getAllProductPaging(int page, int maxResults) {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
         String qString = "from Product u";
         TypedQuery<Product> q = em.createQuery(qString, Product.class);
         List<Product> products;
         try {
             products = q
-                    .setMaxResults(9)
-                    .setFirstResult((page-1)*9) //Position start at 0, 9, 18,...depending on input pages
+                    .setMaxResults(maxResults)
+                    .setFirstResult((page-1)*maxResults)
                     .getResultList();
             if (products == null || products.isEmpty())
                 products = null;
@@ -32,7 +27,7 @@ public class ProductDAO {
         return products;
     }
 
-    public List<Product> getAllProductPagingByCategory(Integer page, Long id) {
+    public List<Product> getAllProductPagingByCategory(int page, Long id) {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
         String qString = "SELECT e FROM Product e INNER JOIN e.category t where t.id=:id";
         TypedQuery<Product> q = em.createQuery(qString, Product.class);
@@ -90,16 +85,15 @@ public class ProductDAO {
         Product product;
         try {
             product = em.find(Product.class,productId);
-            if (product == null)
-                product = null;
         } finally {
             em.close();
         }
         return product;
     }
 
-    public Product insertProduct( Product product) {
-        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+    public void insertProduct(Product product) {
+        EntityManager em;
+        em = ConnectionUtil.getEMF().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         try {
             trans.begin();
@@ -112,6 +106,5 @@ public class ProductDAO {
         finally {
             em.close();
         }
-        return product;
     }
 }

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "HomeServlet", urlPatterns ={"","/home"})
@@ -22,6 +21,15 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url = "/public/index.jsp";
+        loadHomepage(request);
+
+        getServletContext()
+                .getRequestDispatcher(url)
+                .forward(request,response);
+    }
+
+    //default access modifier
+    static void loadHomepage(HttpServletRequest request){
         ProductDAO productDAO = new ProductDAO();
 
         //Show products from Citizen brand
@@ -36,9 +44,5 @@ public class HomeServlet extends HttpServlet {
         casioProducts = productDAO.getProductsFromBrand("Casio");
         //Set request for citizen products
         request.setAttribute("casioProducts", casioProducts);
-
-        getServletContext()
-                .getRequestDispatcher(url)
-                .forward(request,response);
     }
 }

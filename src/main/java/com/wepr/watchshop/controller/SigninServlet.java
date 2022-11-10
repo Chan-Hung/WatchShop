@@ -1,8 +1,6 @@
 package com.wepr.watchshop.controller;
 
-import com.wepr.watchshop.dao.ProductDAO;
 import com.wepr.watchshop.dao.UserDAO;
-import com.wepr.watchshop.model.Product;
 import com.wepr.watchshop.model.User;
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -13,7 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
+
+import static com.wepr.watchshop.controller.HomeServlet.loadHomepage;
 
 @WebServlet(name = "SigninServlet", value = "/signin")
 public class SigninServlet extends HttpServlet {
@@ -45,19 +44,7 @@ public class SigninServlet extends HttpServlet {
         else {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-
-            ProductDAO productDAO = new ProductDAO();
-            //Show products from Citizen brand
-            List<Product> citizenProducts;
-            citizenProducts = productDAO.getProductsFromBrand("Citizen");
-            //Set request for citizen products
-            request.setAttribute("citizenProducts", citizenProducts);
-
-            //Show products from Casio brand
-            List<Product> casioProducts;
-            casioProducts = productDAO.getProductsFromBrand("Casio");
-            //Set request for citizen products
-            request.setAttribute("casioProducts", casioProducts);
+            loadHomepage(request);
         }
         getServletContext()
                 .getRequestDispatcher(url)

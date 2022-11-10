@@ -1,17 +1,15 @@
 package com.wepr.watchshop.controller;
 
-import com.wepr.watchshop.dao.ProductDAO;
 import com.wepr.watchshop.dao.UserDAO;
-import com.wepr.watchshop.model.Product;
 import com.wepr.watchshop.model.User;
 import org.mindrot.jbcrypt.BCrypt;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(name = "SignupServlet", value = "/signup")
 public class SignupServlet extends HttpServlet {
