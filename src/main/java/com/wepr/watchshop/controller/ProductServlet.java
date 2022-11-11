@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
@@ -21,6 +22,11 @@ public class ProductServlet extends HttpServlet {
         ProductDAO productDAO = new ProductDAO();
         String id = request.getParameter("id");
         Product product = productDAO.getProductById(Long.parseLong(id));
+
+
+        List<Product> relatedProducts = productDAO.getRelatedProductsByBrand(4, "Casio");
+
+        request.setAttribute("relatedProducts", relatedProducts);
         request.setAttribute("product", product);
         getServletContext()
                 .getRequestDispatcher(url)

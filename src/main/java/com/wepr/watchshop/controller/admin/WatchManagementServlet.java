@@ -52,6 +52,13 @@ public class WatchManagementServlet extends HttpServlet {
                 request.setAttribute("product", product);
                 break;
 
+            case "editWatch":
+                url = "/admin/watchManagement/editWatch.jsp";
+                id = request.getParameter("id");
+                product = productDAO.getProductById(Long.parseLong(id));
+                request.setAttribute("product", product);
+                break;
+
             case "addWatch":
                 url = "/admin/watchManagement/addWatch.jsp";
                 break;
@@ -76,7 +83,7 @@ public class WatchManagementServlet extends HttpServlet {
             }
         }else if (action.equals("editWatch")){
             try {
-                url = addWatch(request);
+                url = editWatch(request);
             } catch (SQLException | ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
@@ -145,6 +152,65 @@ public class WatchManagementServlet extends HttpServlet {
 
             productImageDAO.insertProductImage(productImage);
         }
+
+        return "/admin/watchManagement/watchManagement.jsp";
+    }
+
+    private String editWatch(HttpServletRequest request) throws SQLException, ClassNotFoundException {
+
+        ProductDAO productDAO = new ProductDAO();
+        // get the user data
+        String name = request.getParameter("name");
+        String categoryId = request.getParameter("category");
+        String brand = request.getParameter("brand");
+        String origin = request.getParameter("origin");
+
+        String glass = request.getParameter("glass");
+        String machine = request.getParameter("machine");
+        String diameter = request.getParameter("diameter");
+        String waterResistant = request.getParameter("waterResistant");
+//        String images = request.getParameter("image");
+        String description = request.getParameter("description");
+        Long price = Long.parseLong(request.getParameter("price"));
+
+
+        Product product = new Product();
+        product.setName(name);
+        product.setBrand(brand);
+        product.setOrigin(origin);
+        product.setGlass(glass);
+        product.setMachine(machine);
+        product.setDiameter(diameter);
+        product.setWaterResistant(waterResistant);
+        product.setDescription(description);
+        product.setPrice(price);
+
+
+
+        //Select category from input
+//        CategoryDAO categoryDAO = new CategoryDAO();
+//        Category category = categoryDAO.getCategoryById(Long.parseLong(categoryId));
+//        product.setCategory(category);
+
+        //Insert product in DB
+        productDAO.updateProduct(product);
+
+
+        System.out.println(product);
+
+//        ProductImageDAO productImageDAO = new ProductImageDAO();
+
+//        String[] imagePaths = images.split(", ");
+//        for(int i = 0; i < imagePaths.length; i++) {
+//            ProductImage productImage = new ProductImage();
+//            productImage.setPath(imagePaths[i]);
+//            productImage.setProduct(product);
+//
+//            //Set first image as a thumbnail
+//            if(i == 0) productImage.setIsThumbnail(true);
+//
+//            productImageDAO.insertProductImage(productImage);
+//        }
 
         return "/admin/watchManagement/watchManagement.jsp";
     }

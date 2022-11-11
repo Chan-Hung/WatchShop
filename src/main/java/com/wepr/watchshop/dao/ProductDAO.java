@@ -46,6 +46,23 @@ public class ProductDAO {
         return products;
     }
 
+    public List<Product> getRelatedProductsByBrand(int maxResults, String brand){
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        String qString = "SELECT e FROM Product e where e.brand=:brand";
+        TypedQuery<Product> q = em.createQuery(qString, Product.class);
+        q.setParameter("brand", brand);
+        List<Product> products;
+        try {
+            products = q
+                    .setMaxResults(maxResults)
+                    .getResultList();
+            if (products == null || products.isEmpty())
+                products = null;
+        } finally {
+            em.close();
+        }
+        return products;
+    }
     public List<Product> getAllProduct() {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
         String qString = "from Product u";
@@ -98,6 +115,23 @@ public class ProductDAO {
         try {
             trans.begin();
             em.persist(product);
+            trans.commit();
+        }catch (Exception e) {
+            e.printStackTrace();
+            trans.rollback();
+        }
+        finally {
+            em.close();
+        }
+    }
+
+    public void updateProduct(Product product) {
+        EntityManager em;
+        em = ConnectionUtil.getEMF().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin();
+            em.merge(product);
             trans.commit();
         }catch (Exception e) {
             e.printStackTrace();
