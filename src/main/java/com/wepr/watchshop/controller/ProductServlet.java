@@ -24,7 +24,9 @@ public class ProductServlet extends HttpServlet {
         Product product = productDAO.getProductById(Long.parseLong(id));
 
 
-        List<Product> relatedProducts = productDAO.getRelatedProductsByBrand(4, "Casio");
+
+        //Retrieve 4 related product except the detailed product being displayed
+        List<Product> relatedProducts = productDAO.getRelatedProductsByBrand(4, product);
 
         request.setAttribute("relatedProducts", relatedProducts);
         request.setAttribute("product", product);

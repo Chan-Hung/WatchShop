@@ -274,7 +274,7 @@
                 </div>
             </div>
             <!-- RELATED PRODUCTS-->
-            <h2 class="h5 text-uppercase mb-4">Related products</h2>
+            <h2 class="h5 text-uppercase mb-4">Sản phẩm liên quan</h2>
             <div class="row">
                 <!-- PRODUCT-->
                 <c:forEach items="${relatedProducts}" var="relatedProduct">

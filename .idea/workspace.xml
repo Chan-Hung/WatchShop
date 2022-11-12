@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="watchshop:war exploded" />
+      <artifact name="watchshop:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Format currency and config .idea folder">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/watchManagement/editWatch.jsp" afterDir="false" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Show related products on Product page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/WatchManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/WatchManagementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" afterDir="false" />
     </list>
@@ -59,17 +58,17 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.scopes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\HK1_2022-2023\WEPR\WatchShop\src\main\webapp\public" />
@@ -265,7 +264,8 @@
       <workItem from="1668088158146" duration="781000" />
       <workItem from="1668089993315" duration="6714000" />
       <workItem from="1668133419664" duration="3954000" />
-      <workItem from="1668146956942" duration="8534000" />
+      <workItem from="1668146956942" duration="9226000" />
+      <workItem from="1668186691552" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -274,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668096560694</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Show related products on Product page">
+      <created>1668156089827</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668156089827</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,18 +300,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Format currency and config .idea folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Format currency and config .idea folder" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Show related products on Product page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show related products on Product page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

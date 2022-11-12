@@ -46,11 +46,12 @@ public class ProductDAO {
         return products;
     }
 
-    public List<Product> getRelatedProductsByBrand(int maxResults, String brand){
+    public List<Product> getRelatedProductsByBrand(int maxResults, Product product){
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
-        String qString = "SELECT e FROM Product e where e.brand=:brand";
+        String qString = "SELECT e FROM Product e where e.brand=:brand and not e.id=:id";
         TypedQuery<Product> q = em.createQuery(qString, Product.class);
-        q.setParameter("brand", brand);
+        q.setParameter("brand", product.getBrand());
+        q.setParameter("id", product.getId());
         List<Product> products;
         try {
             products = q
