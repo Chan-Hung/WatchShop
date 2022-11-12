@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Show related products on Product page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Test automatically deployed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,6 +261,7 @@
       <workItem from="1668133419664" duration="3954000" />
       <workItem from="1668146956942" duration="9226000" />
       <workItem from="1668186691552" duration="878000" />
+      <workItem from="1668215248102" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -281,7 +277,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668156089827</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change language from English to Vietnamese on Detailed Product page">
+      <created>1668215318272</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668215318272</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Test automatically deployed">
+      <created>1668215400608</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668215400608</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +311,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Format currency and config .idea folder" />
     <MESSAGE value="Show related products on Product page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show related products on Product page" />
+    <MESSAGE value="Change language from English to Vietnamese on Detailed Product page" />
+    <MESSAGE value="Test automatically deployed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test automatically deployed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
