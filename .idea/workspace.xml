@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Test merge branch" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Pagination for shop - add multiple images">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,6 +269,7 @@
       <workItem from="1668239070450" duration="24000" />
       <workItem from="1668301699322" duration="604000" />
       <workItem from="1668418689334" duration="999000" />
+      <workItem from="1668419734109" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -316,7 +320,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668419623652</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Pagination for shop - add multiple images">
+      <created>1668420000070</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668420000070</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Pagination for shop - add multiple images">
+      <created>1668420127466</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668420127466</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +371,8 @@
     <MESSAGE value="Test automatically deployed (Second try)" />
     <MESSAGE value="Convert to manually deployed" />
     <MESSAGE value="Test merge branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test merge branch" />
+    <MESSAGE value="Pagination for shop - add multiple images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagination for shop - add multiple images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
