@@ -14,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
-    @Id
+    @Id//test
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
