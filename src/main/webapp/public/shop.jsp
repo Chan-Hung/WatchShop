@@ -11,45 +11,6 @@
 <div class="page-holder">
   <!-- navbar-->
   <%@ include file="../common/public/headerPublic.jsp"%>
-  <!--  Modal -->
-  <div class="modal fade" id="productView" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content overflow-hidden border-0">
-        <button class="btn-close p-4 position-absolute top-0 end-0 z-index-20 shadow-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="modal-body p-0">
-          <div class="row align-items-stretch">
-            <div class="col-lg-6 p-lg-0"><a class="glightbox product-view d-block h-100 bg-cover bg-center" style="background: url(img/product-5.jpg)" href="img/product-5.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-1.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none" href="img/product-5-alt-2.jpg" data-gallery="gallery1" data-glightbox="Red digital smartwatch"></a></div>
-            <div class="col-lg-6">
-              <div class="p-4 my-md-4">
-                <ul class="list-inline mb-2">
-                  <li class="list-inline-item m-0"><i class="fas fa-star small text-warning"></i></li>
-                  <li class="list-inline-item m-0 1"><i class="fas fa-star small text-warning"></i></li>
-                  <li class="list-inline-item m-0 2"><i class="fas fa-star small text-warning"></i></li>
-                  <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
-                  <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
-                </ul>
-                <h2 class="h4">Red digital smartwatch</h2>
-                <p class="text-muted">$250</p>
-                <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.</p>
-                <div class="row align-items-stretch mb-4 gx-0">
-                  <div class="col-sm-7">
-                    <div class="border d-flex align-items-center justify-content-between py-1 px-3"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
-                      <div class="quantity">
-                        <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                        <input class="form-control border-0 shadow-0 p-0" type="text" value="1">
-                        <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-5"><a class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0" href="cart.html">Add to cart</a></div>
-                </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i class="far fa-heart me-2"></i>Add to wish list</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="container">
     <!-- HERO SECTION-->
     <section class="py-5 bg-light">
@@ -74,33 +35,12 @@
         <div class="row">
           <!-- SHOP SIDEBAR-->
           <div class="col-lg-3 order-2 order-lg-1">
-            <h5 class="text-uppercase mb-4">Categories</h5>
+            <h5 class="text-uppercase mb-4">Danh mục hàng</h5>
             <div class="py-2 px-4 bg-dark text-white mb-3"><strong class="small text-uppercase fw-bold">Fashion &amp; Acc</strong></div>
             <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
-              <li class="mb-2"><a class="reset-anchor" href="#!">Women's T-Shirts</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Men's T-Shirts</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Dresses</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Novelty socks</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Women's sunglasses</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Men's sunglasses</a></li>
-            </ul>
-            <div class="py-2 px-4 bg-light mb-3"><strong class="small text-uppercase fw-bold">Health &amp; Beauty</strong></div>
-            <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal">
-              <li class="mb-2"><a class="reset-anchor" href="#!">Shavers</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">bags</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Cosmetic</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Nail Art</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Skin Masks &amp; Peels</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Korean cosmetics</a></li>
-            </ul>
-            <div class="py-2 px-4 bg-light mb-3"><strong class="small text-uppercase fw-bold">Electronics</strong></div>
-            <ul class="list-unstyled small text-muted ps-lg-4 font-weight-normal mb-5">
-              <li class="mb-2"><a class="reset-anchor" href="#!">Electronics</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">USB Flash drives</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Headphones</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Portable speakers</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Cell Phone bluetooth headsets</a></li>
-              <li class="mb-2"><a class="reset-anchor" href="#!">Keyboards</a></li>
+              <li class="mb-2"><a class="reset-anchor" href="shop?category=men&page=1">Đồng hồ Nam</a></li>
+              <li class="mb-2"><a class="reset-anchor" href="shop?category=women&page=1">Đồng hồ Nữ</a></li>
+              <li class="mb-2"><a class="reset-anchor" href="shop?category=couple&page=1">Đồng hồ cho Cặp đôi</a></li>
             </ul>
             <h6 class="text-uppercase mb-4">Price range</h6>
             <div class="price-range pt-4 mb-5">
@@ -177,7 +117,6 @@
             </div>
             <div class="row">
               <!-- PRODUCT-->
-
               <c:forEach items="${productsList}" var="product">
               <div class="col-lg-4 col-sm-6">
                 <div class="product text-center">
@@ -194,7 +133,7 @@
                     <div class="product-overlay">
                       <ul class="mb-0 list-inline">
                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
-                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Add to cart</a></li>
+                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart.html">Thêm vào giỏ hàng</a></li>
                         <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark" href="product?id=${product.id}" data-bs-toggle="modal"><i class="fas fa-expand"></i></a></li>
                       </ul>
                     </div>
@@ -241,13 +180,7 @@
  
 <%--  Footer--%>
   <%@include file="../common/public/footerPublic.jsp"%>
-  <!-- JavaScript files-->
-  <script src="${pageContext.request.contextPath}/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="${pageContext.request.contextPath}/public/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="${pageContext.request.contextPath}/public/vendor/nouislider/nouislider.min.js"></script>
-  <script src="${pageContext.request.contextPath}/public/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="${pageContext.request.contextPath}/public/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
-  <script src="${pageContext.request.contextPath}/public/js/front.js"></script>
+
   <!-- Nouislider Config-->
   <script>
     var range = document.getElementById('range');
@@ -301,7 +234,6 @@
 
   </script>
   <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </div>
 </body>
 </html>

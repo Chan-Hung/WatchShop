@@ -2,16 +2,31 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="watchshop:war" />
+      <artifact name="watchshop:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Pagination for shop - add multiple images">
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Update Order model">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CheckoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/LineItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/cart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/checkout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/CartItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/public/footerPublic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/public/footerPublic.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/public/headerPublic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/public/headerPublic.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +36,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="vinhbranch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JspContextManager">
@@ -49,6 +70,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2HMHhOdsHBEjUQP5Nq7P6pFTCK3" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
@@ -56,18 +80,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/HK1_2022-2023/ECOM/SneakeryAuction&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/HK1_2022-2023/ECOM/SneakeryAuction",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.scopes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\HK1_2022-2023\WEPR\WatchShop\src\main\webapp\public" />
@@ -269,7 +294,11 @@
       <workItem from="1668239070450" duration="24000" />
       <workItem from="1668301699322" duration="604000" />
       <workItem from="1668418689334" duration="999000" />
-      <workItem from="1668419734109" duration="845000" />
+      <workItem from="1668419734109" duration="4295000" />
+      <workItem from="1668436686829" duration="635000" />
+      <workItem from="1668500995139" duration="354000" />
+      <workItem from="1668561691795" duration="10262000" />
+      <workItem from="1668578225306" duration="6997000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -334,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668420127466</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update Order model">
+      <created>1668420713119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668420713119</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +382,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -362,6 +403,26 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/vinhbranch" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Format currency and config .idea folder" />
@@ -372,7 +433,19 @@
     <MESSAGE value="Convert to manually deployed" />
     <MESSAGE value="Test merge branch" />
     <MESSAGE value="Pagination for shop - add multiple images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagination for shop - add multiple images" />
+    <MESSAGE value="Update Order model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Order model" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
