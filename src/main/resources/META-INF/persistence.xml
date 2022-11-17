@@ -2,7 +2,7 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
   http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
-    <persistence-unit name="group15">
+    <persistence-unit name="watchshop">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
@@ -10,7 +10,7 @@
                       value="jdbc:postgresql://ec2-54-160-109-68.compute-1.amazonaws.com:5432/dc7j38gi25oh44"/>
             <property name="javax.persistence.jdbc.user" value="puwsjdgbxzmtjq"/>
             <property name="javax.persistence.jdbc.password" value="722dd4e3556ad582d15b560f3738a9ba5b5354a87bbad4c7b0ce2b062cbcd2db"/>
-            <property name="javax.persistence.schema-generation.database.action" value="none"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
             <property name ="hibernate.show_sql" value = "true" />
             <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.use_sql_comments" value="true" />

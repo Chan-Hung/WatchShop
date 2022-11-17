@@ -9,24 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Update Order model">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CheckoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/LineItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/cart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="CheckoutServlet &amp; CartServlet">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/public/footerPublic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/public/footerPublic.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/public/headerPublic.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/public/headerPublic.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/cart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/ConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,6 +86,11 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.scopes"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -298,7 +298,8 @@
       <workItem from="1668436686829" duration="635000" />
       <workItem from="1668500995139" duration="354000" />
       <workItem from="1668561691795" duration="10262000" />
-      <workItem from="1668578225306" duration="6997000" />
+      <workItem from="1668578225306" duration="7623000" />
+      <workItem from="1668653719835" duration="4245000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -370,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668420713119</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="CheckoutServlet &amp; CartServlet">
+      <created>1668616244877</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668616244877</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +442,8 @@
     <MESSAGE value="Test merge branch" />
     <MESSAGE value="Pagination for shop - add multiple images" />
     <MESSAGE value="Update Order model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Order model" />
+    <MESSAGE value="CheckoutServlet &amp; CartServlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="CheckoutServlet &amp; CartServlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

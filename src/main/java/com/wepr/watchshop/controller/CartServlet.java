@@ -2,7 +2,7 @@ package com.wepr.watchshop.controller;
 
 import com.wepr.watchshop.dao.ProductDAO;
 import com.wepr.watchshop.model.Cart;
-import com.wepr.watchshop.model.LineItem;
+import com.wepr.watchshop.model.Item;
 import com.wepr.watchshop.model.Product;
 
 import javax.servlet.*;
@@ -54,13 +54,13 @@ public class CartServlet extends HttpServlet {
 
                 ProductDAO productDAO = new ProductDAO();
                 Product product = productDAO.getProductById(Long.parseLong(productId));
-                LineItem lineItem = new LineItem();
-                lineItem.setProduct(product);
-                lineItem.setQuantity(quantity);
+                Item item = new Item();
+                item.setProduct(product);
+                item.setQuantity(quantity);
                 if (quantity > 0) {
-                    cart.addItem(lineItem);
+                    cart.addItem(item);
                 } else if (quantity == 0) {
-                    cart.removeItem(lineItem);
+                    cart.removeItem(item);
                 }
             }
             session.setAttribute("cart", cart);

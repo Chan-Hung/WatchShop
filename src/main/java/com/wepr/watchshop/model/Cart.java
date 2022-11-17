@@ -3,24 +3,21 @@ package com.wepr.watchshop.model;
 import java.util.ArrayList;
 
 public class Cart {
-    private ArrayList<LineItem> items;
+    private ArrayList<Item> items;
 
     public Cart() {
-        items = new ArrayList<LineItem>();
+        items = new ArrayList<>();
     }
 
-    public ArrayList<LineItem> getItems() {
+    public ArrayList<Item> getItems() {
         return items;
     }
 
-    public int getCount() {
-        return items.size();
-    }
 
-    public void addItem(LineItem item) {
+    public void addItem(Item item) {
         Long productId = item.getProduct().getId();
         int quantity = item.getQuantity();
-        for (LineItem cartItem : items) {
+        for (Item cartItem : items) {
             if (cartItem.getProduct().getId().equals(productId)) {
                 cartItem.setQuantity(quantity);
                 return;
@@ -29,10 +26,10 @@ public class Cart {
         items.add(item);
     }
 
-    public void removeItem(LineItem item) {
+    public void removeItem(Item item) {
         Long productId = item.getProduct().getId();
         for (int i = 0; i < items.size(); i++) {
-            LineItem lineItem = items.get(i);
+            Item lineItem = items.get(i);
             if (lineItem.getProduct().getId().equals(productId)) {
                 items.remove(i);
                 return;

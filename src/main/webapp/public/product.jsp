@@ -136,11 +136,11 @@
             <!-- DETAILS TABS-->
             <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                 <li class="nav-item"><a class="nav-link text-uppercase active" id="description-tab" data-bs-toggle="tab"
-                                        href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                                        href="#description" role="tab" aria-controls="description" aria-selected="true">Mô tả</a>
                 </li>
                 <li class="nav-item"><a class="nav-link text-uppercase" id="reviews-tab" data-bs-toggle="tab"
                                         href="#reviews" role="tab" aria-controls="reviews"
-                                        aria-selected="false">Reviews</a></li>
+                                        aria-selected="false">Bình luận</a></li>
             </ul>
             <div class="tab-content mb-5" id="myTabContent">
                 <div class="tab-pane fade show active" id="description" role="tabpanel"
