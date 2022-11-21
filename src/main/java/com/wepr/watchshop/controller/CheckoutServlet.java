@@ -5,7 +5,7 @@ import com.wepr.watchshop.dao.AddressDAO;
 import com.wepr.watchshop.dao.ItemDAO;
 import com.wepr.watchshop.dao.OrderDAO;
 import com.wepr.watchshop.model.*;
-import service.PaymentService;
+import com.wepr.watchshop.service.PaymentService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

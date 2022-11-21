@@ -1,4 +1,4 @@
-package service;
+package com.wepr.watchshop.service;
 
 import com.paypal.api.payments.*;
 import com.paypal.base.rest.APIContext;
@@ -50,7 +50,7 @@ public class PaymentService {
     private RedirectUrls getRedirectURLs() {
         RedirectUrls redirectUrls = new RedirectUrls();
         redirectUrls.setCancelUrl("http://localhost:8080/watchshop_war_exploded/");
-        redirectUrls.setReturnUrl("http://localhost:8080/watchshop_war_exploded/review");
+        redirectUrls.setReturnUrl(System.getenv("REVIEW_PAGE"));
 
         return redirectUrls;
     }

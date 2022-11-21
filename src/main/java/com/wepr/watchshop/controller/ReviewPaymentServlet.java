@@ -5,7 +5,7 @@ import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.ShippingAddress;
 import com.paypal.api.payments.Transaction;
 import com.paypal.base.rest.PayPalRESTException;
-import service.PaymentService;
+import com.wepr.watchshop.service.PaymentService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
