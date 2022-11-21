@@ -1,4 +1,4 @@
-package com.wepr.watchshop.controller;
+package com.wepr.watchshop.util.controller;
 
 import com.wepr.watchshop.dao.UserDAO;
 import com.wepr.watchshop.model.User;
@@ -33,7 +33,7 @@ public class SignupServlet extends HttpServlet {
         user.setUserName(userName);
         user.setEmail(email);
         user.setPassword(password);
-        user.setIsAdmin(0);
+        user.setIsAdmin(false);
         try{
             UserDAO userDAO = new UserDAO();
             userDAO.insertUser(user);

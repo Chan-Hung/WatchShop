@@ -1,25 +1,28 @@
 package com.wepr.watchshop.model;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 
+@Getter
 public class Cart {
-    private ArrayList<Item> items;
+    private final ArrayList<Item> items;
 
     public Cart() {
         items = new ArrayList<>();
     }
 
-    public ArrayList<Item> getItems() {
-        return items;
+    public int getCount() {
+        return items.size();
     }
 
-
     public void addItem(Item item) {
-        Long productId = item.getProduct().getId();
+        Long code = item.getProduct().getId();
         int quantity = item.getQuantity();
         for (Item cartItem : items) {
-            if (cartItem.getProduct().getId().equals(productId)) {
+            if (cartItem.getProduct().getId().equals(code)) {
                 cartItem.setQuantity(quantity);
+                cartItem.setAmount(item.getAmount());
                 return;
             }
         }
@@ -27,10 +30,10 @@ public class Cart {
     }
 
     public void removeItem(Item item) {
-        Long productId = item.getProduct().getId();
+        Long code = item.getProduct().getId();
         for (int i = 0; i < items.size(); i++) {
             Item lineItem = items.get(i);
-            if (lineItem.getProduct().getId().equals(productId)) {
+            if (lineItem.getProduct().getId().equals(code)) {
                 items.remove(i);
                 return;
             }

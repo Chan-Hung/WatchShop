@@ -38,6 +38,9 @@
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
           <element id="library" level="project" name="Maven: org.mindrot:jbcrypt:0.3m" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.3" />
+          <element id="library" level="project" name="Maven: com.paypal.sdk:rest-api-sdk:1.14.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.21" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

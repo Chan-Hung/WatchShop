@@ -85,16 +85,6 @@
                     </p>
                     <p class="text-sm mb-4">${product.description}</p>
                     <div class="row align-items-stretch mb-4">
-                        <div class="col-sm-5 pr-sm-0">
-                            <div class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white">
-                                <span class="small text-uppercase text-gray mr-4 no-select">Số lượng</span>
-                                <div class="quantity">
-                                    <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                                    <input class="form-control border-0 shadow-0 p-0" type="text" value="1" name="quantity">
-                                    <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-sm-3 pl-sm-0"><a
                                 class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
                                 href="cart?productId=${product.id}&quantity=1">Thêm vào giỏ hàng</a></div>
@@ -206,7 +196,7 @@
                 </div>
             </div>
             <!-- RELATED PRODUCTS-->
-            <h2 class="h5 text-uppercase mb-4">Sản phẩm liên quan - Test</h2>
+            <h2 class="h5 text-uppercase mb-4">Sản phẩm liên quan</h2>
             <div class="row">
                 <!-- PRODUCT-->
                 <c:forEach items="${relatedProducts}" var="relatedProduct">
@@ -226,8 +216,7 @@
                                     <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
                                                                             href="#!"><i class="far fa-heart"></i></a>
                                     </li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="#!">Add to
-                                        cart</a></li>
+                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="cart?productId=${product.id}&quantity=1">Thêm vào giỏ hàng</a></li>
                                     <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark"
                                                                          href="#productView" data-bs-toggle="modal"><i
                                             class="fas fa-expand"></i></a></li>

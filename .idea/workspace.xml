@@ -9,19 +9,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="CheckoutServlet &amp; CartServlet">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" afterDir="false" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Using new favicon">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/AddressDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/ItemDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/OrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/CartServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/CheckoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ExcecutePaymentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ReviewPaymentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/errorpaypal.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/receipt.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/review.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/watchshop_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/watchshop_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CheckoutServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ShopServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/SigninServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/SignupServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CatgoryManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/CatgoryManagementServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/WatchManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/WatchManagementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/CartItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/LineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/ConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/ConnectionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/css/style.blue.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +98,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2HMHhOdsHBEjUQP5Nq7P6pFTCK3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -79,13 +109,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/HK1_2022-2023/ECOM/SneakeryAuction",
-    "project.structure.last.edited": "Modules",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.scopes"
+    "settings.editor.selected.configurable": "xml.catalog"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -100,6 +131,20 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="SERVER" value="" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="" />
+        <option name="USERNAME" value="" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.81" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.81" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -180,13 +225,28 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
         <EnvironmentVariables>
-          <option name="NAME" value="DB_USERNAME" />
-          <option name="VALUE" value="puwsjdgbxzmtjq" />
+          <option name="NAME" value="CLIENT_ID" />
+          <option name="VALUE" value="ARbeX9_1fbXnAxKTtWE_M64JB9VAh3DLVbBUIjwmHb99_ekrKGfjbjBuZKS8ZmnzQ71e6SL76CzvHsqD" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="CLIENT_SECRET" />
+          <option name="VALUE" value="EP1683W5ErjtIeuqMSWKxRksjPPXqq_jf6zf4f4R-SrKjoz3BqfKwJLyl65q02iacCQSwJ0jzzlti-X7" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
         <EnvironmentVariables>
           <option name="NAME" value="DB_PASSWORD" />
           <option name="VALUE" value="722dd4e3556ad582d15b560f3738a9ba5b5354a87bbad4c7b0ce2b062cbcd2db" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="DB_USERNAME" />
+          <option name="VALUE" value="puwsjdgbxzmtjq" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+        <EnvironmentVariables>
+          <option name="NAME" value="JDBC_URL" />
+          <option name="VALUE" value="jdbc:postgresql://ec2-54-160-109-68.compute-1.amazonaws.com:5432/dc7j38gi25oh44" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
       </ConfigurationWrapper>
@@ -299,7 +359,16 @@
       <workItem from="1668500995139" duration="354000" />
       <workItem from="1668561691795" duration="10262000" />
       <workItem from="1668578225306" duration="7623000" />
-      <workItem from="1668653719835" duration="4245000" />
+      <workItem from="1668653719835" duration="7337000" />
+      <workItem from="1668671031325" duration="601000" />
+      <workItem from="1668671647783" duration="10468000" />
+      <workItem from="1668689313278" duration="8289000" />
+      <workItem from="1668700009664" duration="1337000" />
+      <workItem from="1668729591442" duration="13822000" />
+      <workItem from="1668758237914" duration="2183000" />
+      <workItem from="1668782622886" duration="375000" />
+      <workItem from="1668825256928" duration="14000" />
+      <workItem from="1669000479853" duration="30874000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -378,7 +447,42 @@
       <option name="project" value="LOCAL" />
       <updated>1668616244877</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="CheckoutServlet &amp; CartServlet">
+      <created>1668667968971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668667968971</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Enhance security (Hide password)">
+      <created>1669040707824</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669040707824</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Enhance security (Hide password)">
+      <created>1669046292211</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1669046292211</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Delete favicon">
+      <created>1669046756359</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669046756359</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Using new favicon">
+      <created>1669050396864</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669050396864</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +513,16 @@
             </State>
           </value>
         </entry>
+        <entry key="dca14bfa-5e31-4cdf-b5a6-030238d1f226">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="dca14bfa-5e31-4cdf-b5a6-030238d1f226" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="RECENT_FILTERS">
@@ -443,15 +557,18 @@
     <MESSAGE value="Pagination for shop - add multiple images" />
     <MESSAGE value="Update Order model" />
     <MESSAGE value="CheckoutServlet &amp; CartServlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="CheckoutServlet &amp; CartServlet" />
+    <MESSAGE value="Enhance security (Hide password)" />
+    <MESSAGE value="Delete favicon" />
+    <MESSAGE value="Using new favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using new favicon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/service/PaymentService.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

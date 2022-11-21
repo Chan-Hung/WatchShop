@@ -1,4 +1,4 @@
-package com.wepr.watchshop.controller;
+package com.wepr.watchshop.util.controller;
 
 import com.wepr.watchshop.dao.UserDAO;
 import com.wepr.watchshop.model.User;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static com.wepr.watchshop.controller.HomeServlet.loadHomepage;
+import static com.wepr.watchshop.util.controller.HomeServlet.loadHomepage;
 
 @WebServlet(name = "SigninServlet", value = "/signin")
 public class SigninServlet extends HttpServlet {
@@ -39,7 +39,7 @@ public class SigninServlet extends HttpServlet {
             url = "/public/signin.jsp";
             System.out.println("wrong password");
         }
-        else if (user.getIsAdmin() == 1)
+        else if (user.getIsAdmin() == true)
             url = "/admin/admin.jsp";
         else {
             HttpSession session = request.getSession();

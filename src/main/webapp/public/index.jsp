@@ -92,7 +92,7 @@
                                                                                 href="#!"><i
                                                 class="far fa-heart"></i></a></li>
                                         <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                                                                href="cart?productId=${product.id}&quantity=2">Thêm vào giỏ hàng</a></li>
+                                                                                href="cart?productId=${product.id}&quantity=1">Thêm vào giỏ hàng</a></li>
                                         <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark"
                                                                              href="product?id=${product.id}" data-bs-toggle="modal"><i
                                                 class="fas fa-expand"></i></a></li>

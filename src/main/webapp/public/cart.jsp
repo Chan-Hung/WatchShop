@@ -69,27 +69,35 @@
                   </p>
                 </td>
                 <td class="p-3 align-middle border-0">
-                  <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family">Quantity</span>
-                    <div class="quantity">
-                      <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                      <input class="form-control form-control-sm border-0 shadow-0 p-0" type="text" value="${item.quantity}"/>
-                      <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
-                    </div>
-                  </div>
+<%--                  <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family"></span>--%>
+<%--                    <div class="quantity">--%>
+                      <form action="cart" method="post">
+                        <input type="hidden" name="productId" value="${item.product.id}" >
+                        <input type=text name="quantity" value="${item.quantity}" size="1">
+                        <input type="submit" value="Update">
+                      </form>
+<%--                    </div>--%>
+<%--                  </div>--%>
                 </td>
                 <td class="p-3 align-middle border-0">
-                  <p class="mb-0 small">Chưa có</p>
+                  <p class="mb-0 small">
+                    <fmt:setLocale value = "vi_VN"/>
+                    <fmt:formatNumber value = "${item.amount}" type = "currency"/>
+                  </p>
                 </td>
-                <td class="p-3 align-middle border-0"><a class="reset-anchor" href="#!"><i class="fas fa-trash-alt small text-muted"></i></a></td>
+                <td class="p-3 align-middle border-0"><a class="reset-anchor" href="cart?productId=${item.product.id}&quantity=0"><i class="fas fa-trash-alt small text-muted"></i></a></td>
+<%--                <td class="p-3 align-middle border-0"><a class="reset-anchor" href="cart?productId=${item.product.id}&quantity=${item.quantity}"><i class="fas fa-home-alt"></i></a></td>--%>
+
               </tr>
               </c:forEach>
               </tbody>
             </table>
           </div>
+
           <!-- CART NAV-->
           <div class="bg-light px-4 py-3">
             <div class="row align-items-center text-center">
-              <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm" href="home"><i class="fas fa-long-arrow-alt-left me-2"> </i>Tiếp tục mua sắm</a></div>
+              <div class="col-md-6 mb-3 mb-md-0 text-md-start"><a class="btn btn-link p-0 text-dark btn-sm" href="shop"><i class="fas fa-long-arrow-alt-left me-2"> </i>Tiếp tục mua sắm</a></div>
               <div class="col-md-6 text-md-end"><a class="btn btn-outline-dark btn-sm" href="checkout">Đến trang thanh toán<i class="fas fa-long-arrow-alt-right ms-2"></i></a></div>
             </div>
           </div>
@@ -98,18 +106,23 @@
         <div class="col-lg-4">
           <div class="card border-0 rounded-0 p-lg-4 bg-light">
             <div class="card-body">
-              <h5 class="text-uppercase mb-4">Tổng cộng</h5>
+              <h5 class="text-uppercase mb-4">Sản phẩm đã mua</h5>
               <ul class="list-unstyled mb-0">
-                <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small font-weight-bold">Subtotal</strong><span class="text-muted small">$250</span></li>
+                <c:forEach items="${cart.items}" var="item">
+                <li class="d-flex align-items-center justify-content-between">
+                  <strong class="text-uppercase small font-weight-bold">${item.product.name}</strong><span class="text-muted small">
+                  <fmt:setLocale value = "vi_VN"/>
+                  <fmt:formatNumber value = "${item.amount}" type = "currency"/>
+                </span></li>
                 <li class="border-bottom my-2"></li>
-                <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Total</strong><span>$250</span></li>
+                </c:forEach>
+                <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Thành tiền</strong>
+                  <span>
+                   <fmt:setLocale value = "vi_VN"/>
+                    <fmt:formatNumber value = "${subTotal}" type = "currency"/>
+                </span>
+                </li>
                 <li>
-                  <form action="#">
-                    <div class="input-group mb-0">
-                      <input class="form-control" type="text" placeholder="Enter your coupon">
-                      <button class="btn btn-dark btn-sm w-100" type="submit"> <i class="fas fa-gift me-2"></i>Apply coupon</button>
-                    </div>
-                  </form>
                 </li>
               </ul>
             </div>
