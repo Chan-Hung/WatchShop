@@ -1,4 +1,4 @@
-package com.wepr.watchshop.util.controller.admin;
+package com.wepr.watchshop.controller.admin;
 
 import com.wepr.watchshop.dao.CategoryDAO;
 import com.wepr.watchshop.dao.ProductDAO;

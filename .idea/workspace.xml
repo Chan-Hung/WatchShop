@@ -9,48 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Using new favicon">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/AddressDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/ItemDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/CartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/CheckoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ExcecutePaymentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ReviewPaymentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/PaymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/errorpaypal.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/receipt.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/public/review.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/watchshop_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/watchshop_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CheckoutServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ShopServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/SigninServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/SignupServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CatgoryManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/CatgoryManagementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/WatchManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/WatchManagementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Cart.java" afterDir="false" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Using Paypal for payment (Sandbox mode)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/css/style.blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/shop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/ProductImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/model/ProductImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/CheckoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/CheckoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ExcecutePaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ExcecutePaymentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ReviewPaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ReviewPaymentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/ShopServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/ShopServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/SigninServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SignupServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/CatgoryManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CatgoryManagementServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/util/controller/admin/WatchManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/WatchManagementServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,7 +342,7 @@
       <workItem from="1668758237914" duration="2183000" />
       <workItem from="1668782622886" duration="375000" />
       <workItem from="1668825256928" duration="14000" />
-      <workItem from="1669000479853" duration="30874000" />
+      <workItem from="1669000479853" duration="31638000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -482,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669050396864</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Using Paypal for payment (Sandbox mode)">
+      <created>1669050579659</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669050579659</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +541,8 @@
     <MESSAGE value="Enhance security (Hide password)" />
     <MESSAGE value="Delete favicon" />
     <MESSAGE value="Using new favicon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Using new favicon" />
+    <MESSAGE value="Using Paypal for payment (Sandbox mode)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using Paypal for payment (Sandbox mode)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

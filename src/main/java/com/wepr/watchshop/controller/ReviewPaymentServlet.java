@@ -1,4 +1,4 @@
-package com.wepr.watchshop.util.controller;
+package com.wepr.watchshop.controller;
 
 import com.paypal.api.payments.PayerInfo;
 import com.paypal.api.payments.Payment;

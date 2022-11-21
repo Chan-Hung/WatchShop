@@ -1,4 +1,4 @@
-package com.wepr.watchshop.util.controller;
+package com.wepr.watchshop.controller;
 
 import com.wepr.watchshop.dao.ProductDAO;
 import com.wepr.watchshop.model.Cart;

@@ -1,4 +1,4 @@
-package com.wepr.watchshop.util.controller;
+package com.wepr.watchshop.controller;
 
 import com.paypal.base.rest.PayPalRESTException;
 import com.wepr.watchshop.dao.AddressDAO;

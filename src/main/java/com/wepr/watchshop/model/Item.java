@@ -33,8 +33,4 @@ public class Item {
     @JoinColumn(name = "order_id")
     private Order order;
 
-//    public double getTotal() {
-//        double total = product.getPrice() * quantity;
-//        return total;
-//    }
 }

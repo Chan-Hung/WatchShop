@@ -1,4 +1,4 @@
-package com.wepr.watchshop.util.controller;
+package com.wepr.watchshop.controller;
 
 import com.wepr.watchshop.dao.UserDAO;
 import com.wepr.watchshop.model.User;
