@@ -23,7 +23,7 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-lg-end mb-0 px-0 bg-light">
                 <li class="breadcrumb-item"><a class="text-dark" href="home">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a class="text-dark" href="cart.html">Giỏ hàng</a></li>
+                <li class="breadcrumb-item"><a class="text-dark" href="cart">Giỏ hàng</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
               </ol>
             </nav>
@@ -36,35 +36,35 @@
       <h2 class="h5 text-uppercase mb-4">Chi tiết hóa đơn</h2>
       <div class="row">
         <div class="col-lg-8">
-          <form action="#">
+          <form action="checkout" method="post">
             <div class="row gy-3">
               <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Họ</label>
-                <input class="form-control form-control-lg" type="text" id="firstName" placeholder="Ví dụ : Nguyễn">
+                <label class="form-label text-sm text-uppercase" >Họ</label>
+                <input class="form-control form-control-lg" type="text" name="lastName" value="${order.firstName}" placeholder="Ví dụ : Nguyễn">
               </div>
               <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="lastName">Tên</label>
-                <input class="form-control form-control-lg" type="text" id="lastName" placeholder="Ví dụ: Nam Anh">
+                <label class="form-label text-sm text-uppercase" >Tên</label>
+                <input class="form-control form-control-lg" type="text" name="firstName" value="${order.lastName}" placeholder="Ví dụ: Nam Anh">
               </div>
               <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="email">Địa chỉ email</label>
-                <input class="form-control form-control-lg" type="email" id="email" placeholder="e.g. Jason@example.com">
+                <label class="form-label text-sm text-uppercase" >Địa chỉ email</label>
+                <input class="form-control form-control-lg" type="email" name="email" value="${order.email}" placeholder="e.g. namanh@gmail.com">
               </div>
               <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="phone">Số điện thoại</label>
-                <input class="form-control form-control-lg" type="tel" id="phone" placeholder="e.g. +02 245354745">
+                <label class="form-label text-sm text-uppercase">Số điện thoại</label>
+                <input class="form-control form-control-lg" type="tel" name="phoneNumber" value ="${order.email}" placeholder="e.g. 0998765392">
               </div>
               <div class="col-lg-12">
-                <label class="form-label text-sm text-uppercase" for="address">Địa chỉ nhận hàng</label>
-                <input class="form-control form-control-lg" type="text" id="address" placeholder="Tên nhà và tên đường">
+                <label class="form-label text-sm text-uppercase">Địa chỉ nhận hàng</label>
+                <input class="form-control form-control-lg" type="text" name="homeNumber" value ="${order.address.homeNumber}" placeholder="Địa chỉ nhà">
               </div>
               <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="city">Quận/Huyện</label>
-                <input class="form-control form-control-lg" type="text" id="city">
+                <label class="form-label text-sm text-uppercase">Quận/Huyện</label>
+                <input class="form-control form-control-lg" name="district" type="text" value ="${order.address.district}" id="city">
               </div>
               <div class="col-lg-6">
                 <label class="form-label text-sm text-uppercase" for="state">Tỉnh/Thành</label>
-                <input class="form-control form-control-lg" type="text" id="state">
+                <input class="form-control form-control-lg" type="text" name="city" value ="${order.address.city}"  id="state">
               </div>
               </div>
             <br>
@@ -78,13 +78,35 @@
           <div class="card border-0 rounded-0 p-lg-4 bg-light">
             <div class="card-body">
               <h5 class="text-uppercase mb-4">Đơn hàng của bạn</h5>
+              <h6 class="mb-4">Lưu ý: Đơn vị tiền tệ sẽ được chuyển đổi sang USD tại trang thanh toán Paypal</h6>
               <ul class="list-unstyled mb-0">
-                <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">Red digital smartwatch</strong><span class="text-muted small">$250</span></li>
+                <c:forEach items="${cart.items}" var="item">
+                <li class="d-flex align-items-center justify-content-between">
+                  <strong class="small fw-bold">${item.product.name}</strong>
+                  <span class="text-muted small">
+                    <fmt:setLocale value = "vi_VN"/>
+                    <fmt:formatNumber value = "${item.amount}" type = "currency"/>
+                  </span>
+                </li>
                 <li class="border-bottom my-2"></li>
-                <li class="d-flex align-items-center justify-content-between"><strong class="small fw-bold">Gray Nike running shoes</strong><span class="text-muted small">$351</span></li>
+                </c:forEach>
+                <li class="d-flex align-items-center justify-content-between">
+                  <strong class="small fw-bold">Phí vận chuyển</strong>
+                  <c:set var = "shippingFee" scope = "session" value = "${50000}"/>
+                  <span class="text-muted small">
+                    <fmt:setLocale value = "vi_VN"/>
+                    <fmt:formatNumber value = "${shippingFee}" type = "currency"/>
+                  </span>
+                </li>
                 <li class="border-bottom my-2"></li>
-                <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small fw-bold">Tổng cộng</strong>
-                  <span>$601</span>
+                <li class="d-flex align-items-center justify-content-between">
+                  <strong class="text-uppercase small fw-bold">Tổng cộng</strong>
+                  <span><c:set var = "total" scope = "session" value = "${subTotal + shippingFee}"/>
+                  <span class="text-muted small">
+                    <fmt:setLocale value = "vi_VN"/>
+                    <fmt:formatNumber value = "${total}" type = "currency"/>
+                  </span>
+                  </span>
                 </li>
               </ul>
             </div>
