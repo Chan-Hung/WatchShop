@@ -20,4 +20,4 @@
 <!-- Custom stylesheet - for your changes-->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/custom.css">
 <!-- Favicon-->
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/public/img/favicon.png">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/public/img/favicon2.png">

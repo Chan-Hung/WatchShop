@@ -25,7 +25,11 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="cart"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ Hàng<small class="text-gray fw-normal">(2)</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="cart"> <i class="fas fa-dolly-flatbed me-1 text-gray"></i>Giỏ Hàng
+          <c:if test="${cart != null}">
+            <small class="text-gray fw-normal">(${cart.items.size()})</small>
+          </c:if>
+          </a></li>
           <c:if test="${user == null}">
           <li class="nav-item"><a class="nav-link" href="signup"> <i class="far fa-fire me-1 text-gray fw-normal"></i>Đăng Ký</a></li>
           <li class="nav-item"><a class="nav-link" href="signin"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng Nhập</a></li>
