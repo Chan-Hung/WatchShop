@@ -24,7 +24,22 @@ public class UserDAO {
         }
     }
 
-    public User selectUser(String email) {
+    public void updateUser(User user) {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin();
+            em.merge(user);
+            trans.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+    }
+
+    public User findUserByEmail(String email) {
         EntityManager em = ConnectionUtil.getEMF().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         String query = "SELECT u from User u " + "WHERE u.email = :email";
@@ -43,4 +58,22 @@ public class UserDAO {
         return user;
     }
 
+    public User findUserByVerificationCode(String verificationCode) {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String query = "SELECT u from User u " + "WHERE u.verificationCode = :verificationCode";
+
+        TypedQuery<User> q = em.createQuery(query, User.class);
+        q.setParameter("verificationCode", verificationCode);
+        User user = null;
+        try {
+            user = q.getSingleResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+        return user;
+    }
 }

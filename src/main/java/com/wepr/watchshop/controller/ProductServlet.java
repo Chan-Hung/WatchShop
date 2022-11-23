@@ -23,8 +23,6 @@ public class ProductServlet extends HttpServlet {
         String id = request.getParameter("id");
         Product product = productDAO.getProductById(Long.parseLong(id));
 
-
-
         //Retrieve 4 related product except the detailed product being displayed
         List<Product> relatedProducts = productDAO.getRelatedProductsByBrand(4, product);
 

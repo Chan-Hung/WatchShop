@@ -18,15 +18,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "username",nullable = false)
     private String userName;
 
-    @Column(nullable = false)
+    @Column(name="email",nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column(name="password",nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(name = "verification_code", length = 30)
+    private String verificationCode;
+
+    @Column(name = "is_active", nullable = false)
+    private Boolean isActive;
+
+    @Column(name="is_admin", nullable = false)
     private Boolean isAdmin;
 }

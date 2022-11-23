@@ -35,7 +35,7 @@
           <li class="nav-item"><a class="nav-link" href="signin"> <i class="fas fa-user me-1 text-gray fw-normal"></i>Đăng Nhập</a></li>
           </c:if>
           <c:if test="${user != null}">
-            <li class="nav-item"><a class="nav-link"> <i class="fas fa-user me-1 text-gray fw-normal"></i>${user.userName}</a></li>
+            <li class="nav-item"><a class="nav-link" href="account"> <i class="fas fa-user me-1 text-gray fw-normal"></i>${user.userName}</a></li>
           </c:if>
         </ul>
       </div>

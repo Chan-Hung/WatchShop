@@ -11,7 +11,7 @@
             content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Chỉnh sửa sản phẩm | WatchShop</title>
+    <title>WatchShop | Xem thông tin sản phẩm</title>
     <%@ include file="../../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 

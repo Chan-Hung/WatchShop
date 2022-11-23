@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
   />
 
-  <title>Thêm đồng hồ | WatchShop</title>
+  <title>WatchShop | Thêm đồng hồ</title>
   <%@ include file="../../common/admin/headerLibraryAdmin.jsp"%>
 </head>
 

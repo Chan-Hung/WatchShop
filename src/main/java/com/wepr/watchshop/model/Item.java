@@ -25,12 +25,12 @@ public class Item {
     @Column(name="quantity")
     private Integer quantity;
 
-    //amount = thành tiền
+    //amount: thành tiền
     @Column(name="amount")
     private Long amount;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "order_id",referencedColumnName = "id")
     private Order order;
 
 }
