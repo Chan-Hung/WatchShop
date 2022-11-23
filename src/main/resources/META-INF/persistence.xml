@@ -7,7 +7,11 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="javax.persistence.schema-generation.database.action" value="none"/>
-            <property name="hibernate.show_sql" value = "false" />
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://ec2-54-160-109-68.compute-1.amazonaws.com:5432/dc7j38gi25oh44"/>
+            <property name="javax.persistence.jdbc.user" value="puwsjdgbxzmtjq"/>
+            <property name="javax.persistence.jdbc.password" value="722dd4e3556ad582d15b560f3738a9ba5b5354a87bbad4c7b0ce2b062cbcd2db"/>
+            <property name ="hibernate.show_sql" value = "false" />
             <property name="hibernate.format_sql" value="false" />
             <property name="hibernate.use_sql_comments" value="true" />
         </properties>

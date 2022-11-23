@@ -37,7 +37,7 @@ public class VerifyAccountServlet extends HttpServlet {
         } else {
             user.setVerificationCode(null);
             user.setIsActive(true);
-            userDAO.insertUser(user);
+            userDAO.updateUser(user);
             return true;
         }
     }

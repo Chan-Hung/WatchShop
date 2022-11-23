@@ -20,7 +20,7 @@
           <img class="img-fluid w-5" src="${pageContext.request.contextPath}/public/img/favicon2.png" alt="...">
           <h4 class="mb-2">Cùng trở thành khách hàng thân thiết của WatchShop</h4>
           <p class="mb-4">Đăng ký tài khoản ngay tại đây</p>
-
+          <p>${message}</p>
           <form id="formAuthentication" class="mb-3" action="signup" method="POST">
             <div class="mb-3">
               <label class="form-label">Tên đăng nhập</label>
@@ -66,6 +66,7 @@
                         class="form-control"
                         placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                         required
+                        name = "password2"
                         minlength="8"
                         maxlength="20"
                         aria-describedby="password"

@@ -42,36 +42,46 @@ public class SignupServlet extends HttpServlet {
 
         String userName = request.getParameter("userName");
         String email = request.getParameter("email");
+        UserDAO userDAO = new UserDAO();
+        String password = request.getParameter("password");
+        String password2 = request.getParameter("password2");
 
+        if (!checkUser(email)){
+            request.setAttribute("message", "Email " + email + " đã tồn tại");
+            url = "/public/signup.jsp";
+        } else if (!verifyPassword(password,password2)){
+            request.setAttribute("message", "Xác nhận mật khẩu không khớp");
+            url = "/public/signup.jsp";
+        } else if (checkUser(email)) {
 
-        String password = BCrypt.hashpw(request.getParameter("password"), BCrypt.gensalt());
+            password = BCrypt.hashpw(request.getParameter("password"), BCrypt.gensalt());
 
-        User newUser = new User();
-        newUser.setUserName(userName);
-        newUser.setEmail(email);
-        newUser.setPassword(password);
-        newUser.setIsAdmin(false);
+            User newUser = new User();
+            newUser.setUserName(userName);
+            newUser.setEmail(email);
+            newUser.setPassword(password);
+            newUser.setIsAdmin(false);
 
-        String verificationCode = RandomString.make(30);
-        newUser.setVerificationCode(verificationCode);
-        newUser.setIsActive(false);
+            String verificationCode = RandomString.make(30);
+            newUser.setVerificationCode(verificationCode);
+            newUser.setIsActive(false);
 
-        try{
-            UserDAO userDAO = new UserDAO();
-            userDAO.insertUser(newUser);
             try {
-                String siteURL = getSiteURL(request);
-                EmailService.sendEmail(host, port, user, pass, email, "Xác nhận tài khoản của bạn trên Watchshop",
-                        EmailService.verifyEmail, newUser, siteURL);
-            } catch (Exception ex) {
-                ex.printStackTrace();
+
+                userDAO.insertUser(newUser);
+                try {
+                    String siteURL = System.getenv("SITE_URL");
+                    EmailService.sendEmail(host, port, user, pass, email, "Xác nhận tài khoản của bạn trên Watchshop",
+                            EmailService.verifyEmail, newUser, siteURL);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+                request.setAttribute("user", newUser);
+
+            } catch (NullPointerException e) {
+                e.printStackTrace();
             }
-            request.setAttribute("user", newUser);
-
-        }catch(NullPointerException e){
-            e.printStackTrace();
         }
-
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
@@ -79,5 +89,15 @@ public class SignupServlet extends HttpServlet {
     private String getSiteURL(HttpServletRequest request) {
         String siteURL = request.getRequestURL().toString();
         return siteURL.replace(request.getServletPath(), "");
+    }
+
+    private static Boolean checkUser(String email){
+        UserDAO userDAO = new UserDAO();
+        //Existed : false | Not existed : true
+        return userDAO.findUserByEmail(email) == null;
+    }
+
+    private static Boolean verifyPassword(String password, String password2){
+        return password.equals(password2);
     }
 }

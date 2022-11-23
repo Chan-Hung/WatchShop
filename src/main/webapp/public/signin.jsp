@@ -19,7 +19,7 @@
           <!-- /Logo -->
           <h4 class="mb-2">Chào mừng đến với WatchShop!</h4>
           <p class="mb-4">Hãy đăng nhập ngay tại đây</p>
-
+          <p style="color: red">${message}</p>
           <form id="formAuthentication" class="mb-3" action="signin" method="POST">
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
@@ -48,7 +48,6 @@
                         placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                         aria-describedby="password"
                 />
-                <br>${message}
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>
