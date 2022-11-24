@@ -30,7 +30,6 @@ public class WatchManagementServlet extends HttpServlet {
 
         int paging = Integer.parseInt(page);
 
-
         //Default action
         if (action == null) {
             action = "watchManagement";

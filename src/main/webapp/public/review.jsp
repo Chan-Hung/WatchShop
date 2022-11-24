@@ -71,7 +71,7 @@
             </tr>
             <tr>
                 <td>Email:</td>
-                <td>${payer.email}</td>
+                <td>${user.email}</td>
             </tr>
             <tr><td><br/></td></tr>
             <tr>

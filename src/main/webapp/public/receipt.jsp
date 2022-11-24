@@ -16,6 +16,7 @@
 <div align="center">
   <h1 style="margin-top:20px">Thanh toán hoàn tất</h1>
   <h2 style="margin-top:10px">Cảm ơn bạn đã mua sắm tại Watchshop</h2>
+  <h3 style="margin-top:10px">Hóa đơn đã được gửi về Email bạn</h3>
   <br/>
   <h2>Chi tiết hóa đơn</h2>
   <table>
@@ -56,6 +57,8 @@
       </td>
     </tr>
   </table>
+  <a style="width:130px" class="btn btn-primary" href="home">Về trang chủ</a>
+
 </div>
 </body>
 </html>
