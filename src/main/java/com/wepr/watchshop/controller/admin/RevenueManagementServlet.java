@@ -62,7 +62,9 @@ public class RevenueManagementServlet extends HttpServlet {
             ExcelService excelService = new ExcelService();
 
             excelService.printExcel(orderDAO.getAllOrderPagingByDateTime(paging,null, fromDate,toDate));
+            System.out.println("Print successfully");
         } catch (ParseException e) {
+            System.out.println("Print error");
             throw new RuntimeException(e);
         }
         request.setAttribute("ordersList", orders);

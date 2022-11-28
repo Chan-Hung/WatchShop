@@ -92,4 +92,22 @@ public class OrderDAO {
         return order;
     }
 
+    public List<Order> getAllOrderPagingDesc(int page, int maxResults) {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        String qString = "SELECT u from Order u order by u.createdAt desc ";
+        TypedQuery<Order> q = em.createQuery(qString, Order.class);
+        List<Order> orders;
+        try {
+            orders = q
+                    .setMaxResults(maxResults)
+                    .setFirstResult((page-1)*maxResults)
+                    .getResultList();
+            if (orders == null || orders.isEmpty())
+                orders = null;
+        } finally {
+            em.close();
+        }
+        return orders;
+    }
+
 }

@@ -50,7 +50,7 @@ public class SigninServlet extends HttpServlet {
             OrderDAO orderDAO = new OrderDAO();
             Integer allOrders = orderDAO.getAllOrders();
             Double averageOrderTotal = orderDAO.getAverageOrderTotal();
-            List<Order> fiveOrdersRecently = orderDAO.getAllOrderPaging(1,5);
+            List<Order> fiveOrdersRecently = orderDAO.getAllOrderPagingDesc(1,5);
             request.setAttribute("allOrders", allOrders);
             request.setAttribute("averageOrderTotal", averageOrderTotal);
             request.setAttribute("fiveOrdersRecently", fiveOrdersRecently);

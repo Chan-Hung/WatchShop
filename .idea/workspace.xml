@@ -2,33 +2,24 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="watchshop:war exploded" />
+      <artifact name="watchshop:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Apache Kafka">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CustomerManagementServlet.java" afterDir="false" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Export data into Excel Using ApachePoi">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/service/ExcelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/customerManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/watchshop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/watchshop_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CatgoryManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CatgoryManagementServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/RevenueManagementServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/RevenueManagementServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/CategoryDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/categoryManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/categoryManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/revenueManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/revenueManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/watchManagement/watchManagement.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/watchManagement/watchManagement.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/common/admin/sideBarAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/common/admin/sideBarAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/form-layouts-vertical.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/forms-basic-inputs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/ui-buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/ui-pagination-breadcrumbs.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -363,7 +354,7 @@
       <workItem from="1669279888526" duration="273000" />
       <workItem from="1669304297442" duration="2343000" />
       <workItem from="1669341324418" duration="7701000" />
-      <workItem from="1669602205732" duration="10446000" />
+      <workItem from="1669602205732" duration="19239000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -540,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669266302509</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update Admin UI">
+      <created>1669620137304</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669620137304</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Export data into Excel Using ApachePoi">
+      <created>1669620214662</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1669620214662</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +633,9 @@
     <MESSAGE value="Change site URL (Verify Email)" />
     <MESSAGE value="Filter orders by DateTime" />
     <MESSAGE value="Apache Kafka" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apache Kafka" />
+    <MESSAGE value="Update Admin UI" />
+    <MESSAGE value="Export data into Excel Using ApachePoi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Export data into Excel Using ApachePoi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
