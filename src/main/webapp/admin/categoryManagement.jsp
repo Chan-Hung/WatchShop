@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -136,7 +137,7 @@
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Basic Tables</h4>
+          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span>Quản lý danh mục</h4>
           <!-- Hoverable Table rows -->
           <div class="card">
             <h5 class="card-header">Danh sách sản phẩm</h5>
@@ -145,40 +146,15 @@
                 <thead>
                 <tr>
                   <th>STT</th>
-                  <th>Tên đồng hồ</th>
-                  <th>Nhãn hiệu</th>
-                  <th>Kính</th>
-                  <th>Giá</th>
-                  <th>Chức năng</th>
+                  <th>Tên danh mục</th>
                 </tr>
                 </thead>
 
                 <tbody class="table-border-bottom-0">
-                <c:forEach items="${productsList}" var="o">
+                <c:forEach items="${categoryList}" var="o">
                   <tr>
                     <td>${o.id}</td>
                     <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>${o.name}</strong>
-                    </td>
-                    <td>${o.brand}</td>
-                    <td>
-                        ${o.glass}
-                    </td>
-                    <td><span class="badge bg-label-success me-1">${o.price}</span></td>
-                    <td>
-                      <div class="dropdown">
-                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                data-bs-toggle="dropdown">
-                          <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="test?action=checkUser&id=${o.id}"
-                          ><i class="bx bx-edit-alt me-1"></i> Chỉnh sửa</a
-                          >
-                          <a class="dropdown-item" href="javascript:void(0);"
-                          ><i class="bx bx-trash me-1"></i> Xóa</a
-                          >
-                        </div>
-                      </div>
                     </td>
                   </tr>
                 </c:forEach>

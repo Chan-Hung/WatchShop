@@ -4,6 +4,7 @@ import com.wepr.watchshop.dao.OrderDAO;
 import com.wepr.watchshop.dao.ProductDAO;
 import com.wepr.watchshop.model.Order;
 import com.wepr.watchshop.model.Product;
+import com.wepr.watchshop.service.ExcelService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -58,6 +59,9 @@ public class RevenueManagementServlet extends HttpServlet {
         List<Order> orders = null;
         try {
             orders = orderDAO.getAllOrderPagingByDateTime(paging, 8, fromDate, toDate);
+            ExcelService excelService = new ExcelService();
+
+            excelService.printExcel(orderDAO.getAllOrderPagingByDateTime(paging,null, fromDate,toDate));
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }

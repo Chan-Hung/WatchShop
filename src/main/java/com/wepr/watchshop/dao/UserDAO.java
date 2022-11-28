@@ -6,6 +6,7 @@ import com.wepr.watchshop.util.ConnectionUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
+import java.util.List;
 
 public class UserDAO {
 
@@ -75,5 +76,23 @@ public class UserDAO {
             em.close();
         }
         return user;
+    }
+
+    public List<User> findAllUser() {
+        EntityManager em = ConnectionUtil.getEMF().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String query = "SELECT u from User u " + "WHERE u.isAdmin = false ";
+
+        TypedQuery<User> q = em.createQuery(query, User.class);
+        List<User>  users = null;
+        try {
+            users = q.getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+        return users;
     }
 }

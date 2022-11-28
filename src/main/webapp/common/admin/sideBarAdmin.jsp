@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="menu-item">
-        <a href="admin" class="menu-link">
+        <a href="customer" class="menu-link">
             <i class="menu-icon tf-icons bx bx-id-card"></i>
             <div data-i18n="Analytics">Quản lý Khách hàng</div>
         </a>

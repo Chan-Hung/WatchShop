@@ -1,6 +1,9 @@
 package com.wepr.watchshop.controller;
 
+import com.wepr.watchshop.controller.admin.AdminServlet;
+import com.wepr.watchshop.dao.OrderDAO;
 import com.wepr.watchshop.dao.UserDAO;
+import com.wepr.watchshop.model.Order;
 import com.wepr.watchshop.model.User;
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -8,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.List;
 
 import static com.wepr.watchshop.controller.HomeServlet.loadHomepage;
 
@@ -41,7 +45,16 @@ public class SigninServlet extends HttpServlet {
             request.setAttribute("message", "Tài khoản chưa xác thực. vui lòng kiểm tra Email");
         }
         else if (user.getIsAdmin())
+        {
             url = "/admin/admin.jsp";
+            OrderDAO orderDAO = new OrderDAO();
+            Integer allOrders = orderDAO.getAllOrders();
+            Double averageOrderTotal = orderDAO.getAverageOrderTotal();
+            List<Order> fiveOrdersRecently = orderDAO.getAllOrderPaging(1,5);
+            request.setAttribute("allOrders", allOrders);
+            request.setAttribute("averageOrderTotal", averageOrderTotal);
+            request.setAttribute("fiveOrdersRecently", fiveOrdersRecently);
+        }
         else {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);

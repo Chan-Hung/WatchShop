@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -138,7 +139,7 @@
 
 
                 <div class="container-xxl flex-grow-1 container-p-y">
-                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý /</span> Quản lý Hàng hóa</h4>
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard/</span> Quản lý Hàng hóa</h4>
                     <!-- Hoverable Table rows -->
                     <div class="card">
                         <h5 style="padding-bottom:12px;" class="card-header">Danh sách sản phẩm</h5>
@@ -150,7 +151,7 @@
                                     <th>STT</th>
                                     <th>Tên đồng hồ</th>
                                     <th>Thương hiệu</th>
-                                    <th>Số lượng</th>
+                                    <th>Chất liệu</th>
                                     <th>Giá</th>
                                     <th>Chức năng</th>
                                 </tr>
@@ -166,7 +167,11 @@
                                         <td>
                                                 ${product.glass}
                                         </td>
-                                        <td><span class="badge bg-label-success me-1">${product.price}</span></td>
+                                        <td><span class="badge bg-label-success me-1">
+                                                 <fmt:setLocale value = "vi_VN"/>
+                                            <fmt:formatNumber value = "${product.price}" type = "currency"/>
+                                        </span>
+                                        </td>
                                         <td>
                                             <div class="dropdown">
                                                 <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
