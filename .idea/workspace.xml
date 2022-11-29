@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Config path to store Excel file">
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Enhance security">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/SigninServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/signin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +349,8 @@
       <workItem from="1669304297442" duration="2343000" />
       <workItem from="1669341324418" duration="7701000" />
       <workItem from="1669602205732" duration="20296000" />
-      <workItem from="1669637913831" duration="6896000" />
+      <workItem from="1669637913831" duration="8961000" />
+      <workItem from="1669712924682" duration="3275000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -545,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669629913058</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Enhance security">
+      <created>1669645593805</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645593805</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +621,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Format currency and config .idea folder" />
     <MESSAGE value="Show related products on Product page" />
     <MESSAGE value="Change language from English to Vietnamese on Detailed Product page" />
     <MESSAGE value="Test automatically deployed" />
@@ -636,7 +645,8 @@
     <MESSAGE value="Update Admin UI" />
     <MESSAGE value="Export data into Excel Using ApachePoi" />
     <MESSAGE value="Config path to store Excel file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config path to store Excel file" />
+    <MESSAGE value="Enhance security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
