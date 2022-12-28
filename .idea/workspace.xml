@@ -9,7 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Add Jackson annotation dependency" />
+    <list default="true" id="df968401-e99a-49f8-aa98-c4b5cc20800d" name="Changes" comment="Add Jackson annotation dependency">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40031b04-9fc1-4cd6-a278-60202c9955e2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40031b04-9fc1-4cd6-a278-60202c9955e2/storage_v2/_src_/database/dc7j38gi25oh44.9Sw9tQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40031b04-9fc1-4cd6-a278-60202c9955e2/storage_v2/_src_/database/dc7j38gi25oh44.9Sw9tQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40031b04-9fc1-4cd6-a278-60202c9955e2/storage_v2/_src_/database/dc7j38gi25oh44.9Sw9tQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40031b04-9fc1-4cd6-a278-60202c9955e2/storage_v2/_src_/database/dc7j38gi25oh44.9Sw9tQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wepr/watchshop/service/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,17 +197,17 @@
         </EnvironmentVariables>
         <EnvironmentVariables>
           <option name="NAME" value="DB_PASSWORD" />
-          <option name="VALUE" value="722dd4e3556ad582d15b560f3738a9ba5b5354a87bbad4c7b0ce2b062cbcd2db" />
+          <option name="VALUE" value="EkCoJiSmDV1hPICULF4L" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
         <EnvironmentVariables>
           <option name="NAME" value="DB_USERNAME" />
-          <option name="VALUE" value="puwsjdgbxzmtjq" />
+          <option name="VALUE" value="uxoxlrnirqpxobrqtmch" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
         <EnvironmentVariables>
           <option name="NAME" value="JDBC_URL" />
-          <option name="VALUE" value="jdbc:postgresql://ec2-54-160-109-68.compute-1.amazonaws.com:5432/dc7j38gi25oh44" />
+          <option name="VALUE" value="jdbc:postgresql://bgshjiy7ttnu2xlm8szi-postgresql.services.clever-cloud.com:5432/bgshjiy7ttnu2xlm8szi" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
         <EnvironmentVariables>
@@ -205,13 +216,13 @@
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
         <EnvironmentVariables>
-          <option name="NAME" value="SMTP_PASSWORD" />
-          <option name="VALUE" value="qrdginftdejupvvi" />
+          <option name="NAME" value="SITE_URL" />
+          <option name="VALUE" value="https://watchshop.live" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
         <EnvironmentVariables>
-          <option name="NAME" value="SITE_URL" />
-          <option name="VALUE" value="https://watchshop.live" />
+          <option name="NAME" value="SMTP_PASSWORD" />
+          <option name="VALUE" value="qrdginftdejupvvi" />
           <option name="IS_PREDEFINED" value="false" />
         </EnvironmentVariables>
       </ConfigurationWrapper>
@@ -346,6 +357,29 @@
       <workItem from="1669602205732" duration="20296000" />
       <workItem from="1669637913831" duration="8961000" />
       <workItem from="1669712924682" duration="3275000" />
+      <workItem from="1669811745901" duration="5498000" />
+      <workItem from="1669821416481" duration="1524000" />
+      <workItem from="1669858862034" duration="525000" />
+      <workItem from="1669859406740" duration="537000" />
+      <workItem from="1669860186349" duration="17000" />
+      <workItem from="1669906230259" duration="263000" />
+      <workItem from="1670291565631" duration="1931000" />
+      <workItem from="1670296879408" duration="750000" />
+      <workItem from="1670648920943" duration="69000" />
+      <workItem from="1670944500498" duration="3117000" />
+      <workItem from="1671087096747" duration="742000" />
+      <workItem from="1671125322847" duration="126000" />
+      <workItem from="1671280936078" duration="2961000" />
+      <workItem from="1671381260600" duration="1062000" />
+      <workItem from="1671382381855" duration="76000" />
+      <workItem from="1671382484890" duration="695000" />
+      <workItem from="1671763433893" duration="1112000" />
+      <workItem from="1671854430998" duration="3901000" />
+      <workItem from="1672023974338" duration="106000" />
+      <workItem from="1672234765172" duration="658000" />
+      <workItem from="1672239458114" duration="1172000" />
+      <workItem from="1672241650082" duration="581000" />
+      <workItem from="1672243282717" duration="85000" />
     </task>
     <task id="LOCAL-00001" summary="Format currency and config .idea folder">
       <created>1668096560694</created>
@@ -557,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669795828878</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Add Jackson annotation dependency">
+      <created>1669796064894</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1669796064894</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,6 +698,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/CatgoryManagementServlet.java</url>
           <line>20</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wepr/watchshop/controller/admin/RevenueManagementServlet.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

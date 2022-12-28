@@ -163,7 +163,7 @@
                     <div class="col-lg-6">
                         <h5 class="text-uppercase">Trở Thành Khách Hàng Thân Thiết</h5>
                         <p class="text-sm text-muted mb-0">Cập Nhật những chương trình sản phẩm mới và giảm giá về Email
-                            của bạn</p>
+                            của bạnn</p>
                     </div>
                     <div class="col-lg-6">
                         <form action="#">
