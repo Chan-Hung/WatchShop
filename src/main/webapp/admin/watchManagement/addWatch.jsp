@@ -200,6 +200,10 @@
                       <input type="text" class="form-control"  name="price" value="${product.price}" />
                     </div>
                     <button type="submit" class="btn btn-primary">Thêm</button>
+                    <c:if test="${checkproduct == 'sai'}">
+                      <div class="announce-error" style="color: red; margin-top: 10px">* Sản phẩm đã tồn tại vui lòng nhập sản phẩm khác.</div>
+                    </c:if>
+
                   </form>
                 </div>
               </div>

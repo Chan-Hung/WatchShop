@@ -114,6 +114,8 @@ public class WatchManagementServlet extends HttpServlet {
         Long price = Long.parseLong(request.getParameter("price"));
 
 
+
+
         Product product = new Product();
         product.setName(name);
         product.setBrand(brand);
@@ -125,7 +127,22 @@ public class WatchManagementServlet extends HttpServlet {
         product.setDescription(description);
         product.setPrice(price);
 
+        // kiem tra san pham da ton tai chua
+        List<Product> productList = productDAO.getAllProduct();
 
+        String checkProduct = "sai";
+        if(!productList.isEmpty())
+        {
+            for (int j = 0; j < productList.size(); j++)
+            {
+                if(product.getName().equals(productList.get(j).getName()))
+                {
+                    // San pham da ton tai. Thong bao va bat nhap lai.);
+                    request.setAttribute("checkproduct", checkProduct);
+                    return "/admin/watchManagement/addWatch.jsp";
+                }
+            }
+        }
 
         //Select category from input
         CategoryDAO categoryDAO = new CategoryDAO();

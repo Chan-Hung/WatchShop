@@ -33,17 +33,17 @@
                                 </div>
                                 <hr class="my-0" />
                                 <div class="card-body">
-                                    <form id="formAccountSettings" method="POST" onsubmit="return false">
+                                    <form id="change" action="change" method="POST">
                                         <div class="row">
                                             <div class="mb-3 col-md-6">
                                                 <label for="firstName" class="form-label">Tên đăng nhập</label>
                                                 <input
-                                                        class="form-control"
+                                                        class="form-control form-user"
                                                         type="text"
                                                         id="firstName"
                                                         name="firstName"
                                                         value="${user.userName}"
-                                                        readonly
+
                                                 />
                                             </div>
                                             <div class="mb-3 col-md-6">
@@ -58,8 +58,9 @@
                                                 />
                                             </div>
                                             <div class="mt-2">
-                                            <button type="submit" class="btn btn-primary me-2">Lưu thay đổi</button>
-                                            <a style="width:130px" class="btn btn-primary" href="signout">Đăng xuất</a>
+                                                <button type="submit" class="btn btn-primary me-2">Lưu thay đổi</button>
+                                                <a style="width:130px" class="btn btn-primary" href="signout">Đăng xuất</a>
+<%--                                                <a style="width:130px" class="btn btn-primary" href="change?email=${user.email}&name=${user.userName}">Lưu thay đổi</a>--%>
                                             </div>
                                         </div>
                                     </form>
