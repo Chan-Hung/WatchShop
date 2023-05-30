@@ -36,7 +36,7 @@
                                     <form id="change" action="change" method="POST">
                                         <div class="row">
                                             <div class="mb-3 col-md-6">
-                                                <label for="firstName" class="form-label">Tên đăng nhập</label>
+                                                <label for="firstName" class="form-label">Tên người dùng</label>
                                                 <input
                                                         class="form-control form-user"
                                                         type="text"
